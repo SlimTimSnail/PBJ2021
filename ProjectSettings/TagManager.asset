@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Player_Parent
-  - Word_Parent
+  tags: []
   layers:
   - Default
   - TransparentFX

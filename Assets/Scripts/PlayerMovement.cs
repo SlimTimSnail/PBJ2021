@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
+        transform.SetParent(GameObject.FindGameObjectWithTag("Player_Parent").transform, false);
     }
     void Start()
     {

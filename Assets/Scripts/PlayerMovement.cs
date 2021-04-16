@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
         m_rigidbody = GetComponent<Rigidbody2D>();
 
         transform.SetParent(GameController.Instance.PlayerParent, false);
+        transform.position = GameController.Instance.GetPlayerSpawnPosition();
     }
     void Start()
     {

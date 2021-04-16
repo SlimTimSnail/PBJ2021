@@ -16,6 +16,12 @@ public class GameController : MonoBehaviour
     public Transform WordParent => m_wordParent;
     #endregion
 
+    #region Spawn Controllers
+    [SerializeField]
+    private SpawnController m_playerSpawnController;
+    public Vector3 GetPlayerSpawnPosition() => m_playerSpawnController.GetSpawnPosition();
+    #endregion
+
     // Start is called before the first frame update
     void Awake()
     {

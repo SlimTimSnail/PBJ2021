@@ -3,39 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    private Rigidbody2D m_rigidbody;
+
     [SerializeField]
-    [Range(1, 10)]
+    [Range(1, 50)]
     private float m_movementSpeed;
 
     private bool m_movementActionHeld = false;
     private Vector2 m_movementLastInputValue;
 
-    // Start is called before the first frame update
+    // Constants
+    private const float MOVEMENT_TO_FORCE_MULTIPLIER = 500f;
 
-    private void OnEnable()
+    private void Awake()
     {
-        /*
-        m_movementAction = PlayerInputManager.instance.ac
-
-        m_movementAction.started += x => m_movementActionHeld = true;
-        m_movementAction.canceled += x => m_movementActionHeld = false;
-        */
+        m_rigidbody = GetComponent<Rigidbody2D>();
     }
-
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (m_movementActionHeld && !(m_movementLastInputValue == new Vector2(0, 0)))
         {
-            Vector2 movement = m_movementLastInputValue * m_movementSpeed * Time.deltaTime;
-            transform.Translate(movement);
+            Vector2 movement = m_movementLastInputValue * m_movementSpeed * MOVEMENT_TO_FORCE_MULTIPLIER * Time.deltaTime;
+            //transform.Translate(movement);
+            m_rigidbody.AddForce(movement);
         }
     }
 

@@ -10,13 +10,13 @@ GameObject:
   m_Component:
   - component: {fileID: 3806886461756387966}
   - component: {fileID: 3806886461756387964}
-  - component: {fileID: 3806886461756387965}
   - component: {fileID: 1374388070}
   - component: {fileID: 1374388072}
   - component: {fileID: 1374388075}
   - component: {fileID: 6598402002643030223}
+  - component: {fileID: 4064948446098728040}
   m_Layer: 5
-  m_Name: Player 3(Magenta)
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -49,36 +49,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3806886461756387967}
   m_CullTransparentMesh: 1
---- !u!114 &3806886461756387965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3806886461756387967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 5281096421714948174, guid: a0edcb733d706db4c8ad34f6aa272611, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!114 &1374388070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -217,10 +187,28 @@ CircleCollider2D:
   m_GameObject: {fileID: 3806886461756387967}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 3f56b10a04dbc1043aa56c4739647595, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1, y: 1}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 17
+  m_Radius: 32
+--- !u!114 &4064948446098728040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806886461756387967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5c211d08d0dc04dbe0c65c25435f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerVisualPrefabList:
+  - {fileID: 3806886461756387965, guid: e9ad766558b59244fb4e649aa970937b, type: 3}
+  - {fileID: 3806886461756387965, guid: 157569d3321012445bf6817b4cf1e10e, type: 3}
+  - {fileID: 3806886461756387965, guid: 99dc599a9dcd47744a3b645483485e84, type: 3}
+  - {fileID: 3806886461756387965, guid: 5c106a7d51263f54d8bfbaca8766f5df, type: 3}
+  m_defaultPlayerVisualPrefab: {fileID: 3806886461756387965, guid: 5d4cc29398798ba46b6576881db8442f, type: 3}

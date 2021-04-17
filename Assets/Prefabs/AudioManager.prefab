@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1852219697918768198}
   - component: {fileID: 7761595737015517206}
-  - component: {fileID: 3002038043994580555}
   m_Layer: 0
   m_Name: AudioManager
   m_TagString: Untagged
@@ -128,11 +127,3 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!81 &3002038043994580555
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4165689883128636133}
-  m_Enabled: 1

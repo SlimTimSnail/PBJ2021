@@ -14,6 +14,8 @@ public class SentenceManager : MonoBehaviour
     public Sentence CurrentSentence => m_sentences[m_currentSentence];
     private int m_currentSentence = -1;
 
+    private List<Word> m_wordPool;
+    private int m_currentWord = 0;
     private List<Word> m_formedSentence;
     private bool m_subjectSpoken;
     private bool m_verbSpoken;
@@ -31,14 +33,33 @@ public class SentenceManager : MonoBehaviour
     {
         ++m_currentSentence;
         m_formedSentence = new List<Word>();
+        
+        m_wordPool = new List<Word>();
+
+        List<Word> temp = new List<Word>();
+        temp.AddRange(CurrentSentence.ValidWords);
+        temp.AddRange(CurrentSentence.InvalidWords);    
+        while (temp.Count > 0)
+        {
+            int index = Random.Range(0, temp.Count);
+            m_wordPool.Add(temp[index]);
+            temp.RemoveAt(index);
+        }
+
         m_subjectSpoken = false;
         m_verbSpoken = false;
         m_correctOrder = false;
         m_correctOrder = true;
         m_points = 0;
+        m_currentWord = 0;
     }
 
-
+    public Word GetNextWord()
+    {
+        Word w = m_wordPool[m_currentWord];
+        m_currentWord = (m_currentWord + 1) % m_wordPool.Count;
+        return w;
+    }
 
     
     public void WordScored(Word word)

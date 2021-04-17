@@ -4,14 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(SpawnController))]
-public class SpawnWhichObject : MonoBehaviour
+public class SpawnWhichObject : MonoBehaviour, IGetSpawnObject
 {
     [SerializeField]
-    private List<GameObject> m_objectsToChooseFrom;
+    protected List<GameObject> m_objectsToChooseFrom;
 
     private int m_currentObjectIndex;
 
-    internal GameObject GetObjectToSpawn()
+    public GameObject GetObjectToSpawn()
     {
         GameObject spawnObject = m_objectsToChooseFrom[m_currentObjectIndex];
         m_currentObjectIndex = (m_currentObjectIndex + 1) % m_objectsToChooseFrom.Count;

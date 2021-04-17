@@ -7,6 +7,7 @@ public class Word :ScriptableObject
     public float Points => m_points;
     public float Weight => m_weight;
     public WordCategory Category => m_category;
+    public int Size => m_size;
 
     public int MatchTags(Word other)
     {
@@ -32,6 +33,8 @@ public class Word :ScriptableObject
     private float m_points;
     [SerializeField]
     private float m_weight;
+    [SerializeField]
+    private int m_size;
 
     [ContextMenu("Rename")]
     private void Rename()

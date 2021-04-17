@@ -45,6 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_sentences:
   - {fileID: 11400000, guid: 7be6bacd13a28d94b87d401c8c41fc75, type: 2}
+  - {fileID: 11400000, guid: d020458eee13685448e904d80a869ea5, type: 2}
+  - {fileID: 11400000, guid: 3f4f8c8bf069cbe439925fd562e9f53e, type: 2}
   m_sentenceComplete:
     m_PersistentCalls:
       m_Calls: []

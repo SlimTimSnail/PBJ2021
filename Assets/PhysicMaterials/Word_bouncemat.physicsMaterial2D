@@ -7,5 +7,5 @@ PhysicsMaterial2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Word_bouncemat
-  friction: 0.4
-  bounciness: 2
+  friction: 0
+  bounciness: 1

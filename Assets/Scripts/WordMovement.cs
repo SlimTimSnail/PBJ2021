@@ -37,6 +37,6 @@ public class WordMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        m_rigidbody.AddForce(m_constantForce);
+        m_rigidbody.AddForce(m_constantForce * m_rigidbody.mass);
     }
 }

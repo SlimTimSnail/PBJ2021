@@ -18,13 +18,14 @@ public class SpawnOnTimer : MonoBehaviour
 
     private void Awake()
     {
+        m_nextTime = Time.time + m_secondsInterval;
         m_spawnWhichObject = GetComponent<SpawnWhichObject>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (Time.realtimeSinceStartup >= m_nextTime)
+        while (Time.time >= m_nextTime)
         {
             Spawn();
             m_nextTime += m_secondsInterval;

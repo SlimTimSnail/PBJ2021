@@ -29,7 +29,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Size.y
-      value: 75
+      value: 125
       objectReference: {fileID: 0}
     - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_constantForce.x
@@ -39,6 +39,10 @@ PrefabInstance:
       propertyPath: m_Text
       value: Long Long Long
       objectReference: {fileID: 0}
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f9904d63c95822d418b04789af31e091, type: 3}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
       value: Word_Long

@@ -6,8 +6,15 @@ public class Word :ScriptableObject
     public string Text => m_text;
     public float Points => m_points;
     public float Weight => m_weight;
-    public WordCategory Category => m_category;
 
+    public bool MatchCategory(WordCategory category)
+    {
+        foreach (WordCategory c in m_categories)
+        {
+            if (c == category) return true;
+        }
+        return false;
+    }
     public int MatchTags(Word other)
     {
         int matches = 0;
@@ -25,7 +32,7 @@ public class Word :ScriptableObject
     [SerializeField, ContextMenuItem("Set to Name", "SetTextToName")]
     private string m_text;
     [SerializeField]
-    private WordCategory m_category;
+    private WordCategory[] m_categories;
     [SerializeField, WordTag]
     private string[] m_tags;
     [SerializeField]

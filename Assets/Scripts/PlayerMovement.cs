@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 m_movementLastInputValue;
 
     // Constants
-    private const float MOVEMENT_TO_FORCE_MULTIPLIER = 10f;
+    private const float MOVEMENT_TO_FORCE_MULTIPLIER = 500f;
 
     [SerializeField]
     private bool m_ignoreSpawner;
@@ -34,11 +34,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void FixedUpdate()
+    void Update()
     {
         if (m_movementActionHeld && !(m_movementLastInputValue == new Vector2(0, 0)))
         {
-            Vector2 movement = m_movementLastInputValue * m_movementSpeed * MOVEMENT_TO_FORCE_MULTIPLIER;
+            Vector2 movement = m_movementLastInputValue * m_movementSpeed * MOVEMENT_TO_FORCE_MULTIPLIER * Time.deltaTime;
             m_rigidbody.AddForce(movement);
         }
     }

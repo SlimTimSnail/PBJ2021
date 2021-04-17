@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2786229241631681035}
   - component: {fileID: 8663556575454439374}
   - component: {fileID: 2070275909990533503}
-  m_Layer: 7
-  m_Name: Goal_Zone
+  m_Layer: 5
+  m_Name: Goal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

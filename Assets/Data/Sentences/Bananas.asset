@@ -12,9 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a5ecfab4a3dce4eae1151d200db160, type: 3}
   m_Name: Bananas
   m_EditorClassIdentifier: 
-  m_validWords:
-  - {fileID: 11400000, guid: 8387e963bc7887541aaf63c775534370, type: 2}
-  - {fileID: 11400000, guid: 5467f427ba8f5d845982a897268d4057, type: 2}
-  - {fileID: 11400000, guid: 6dd76509afbb3e644a2fe50013bfb557, type: 2}
-  m_invalidWords:
+  m_correctSentence:
+  - m_category: 0
+    m_word: {fileID: 11400000, guid: 8387e963bc7887541aaf63c775534370, type: 2}
+    m_allowReplacement: 0
+  - m_category: 0
+    m_word: {fileID: 11400000, guid: 5467f427ba8f5d845982a897268d4057, type: 2}
+    m_allowReplacement: 0
+  - m_category: 0
+    m_word: {fileID: 11400000, guid: 6dd76509afbb3e644a2fe50013bfb557, type: 2}
+    m_allowReplacement: 1
+  m_miscWords:
   - {fileID: 11400000, guid: 0df702fcd6d2a074cb34e1272cf22496, type: 2}
+  - {fileID: 11400000, guid: 0df702fcd6d2a074cb34e1272cf22496, type: 2}
+  - {fileID: 11400000, guid: 0d69b63068f5c984dbe20beebae93962, type: 2}

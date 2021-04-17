@@ -32,6 +32,10 @@ PrefabInstance:
       value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_initialForce.x
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_constantForce.x
       value: 0
       objectReference: {fileID: 0}

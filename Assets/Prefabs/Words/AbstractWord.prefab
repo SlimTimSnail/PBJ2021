@@ -219,6 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 0
+  m_initialForce: {x: 100, y: 0}
   m_constantForce: {x: 15, y: 0}
   m_randomStartingRotation: 1
 --- !u!114 &8987589486781496436

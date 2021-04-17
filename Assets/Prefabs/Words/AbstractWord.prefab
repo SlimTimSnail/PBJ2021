@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: WRDDD
+  m_Text: Abstract Word
 --- !u!1 &8545585747573465428
 GameObject:
   m_ObjectHideFlags: 0

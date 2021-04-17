@@ -3,68 +3,22 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Sentence : ScriptableObject
 {
-    [System.Serializable]
-    public class SentenceWord
-    {
-        public WordCategory Category => m_category;
-        public Word Word => m_word;
-        public bool AllowReplacement => m_allowReplacement;
-
-        [System.NonSerialized]
-        public bool Spoken = false;
-
-        [SerializeField]
-        private WordCategory m_category;
-        [SerializeField]
-        private Word m_word;
-        [SerializeField, Tooltip("Allow Replacement")]
-        private bool m_allowReplacement;
-
-    }
-
-    public SentenceWord[] CorrectSentence => m_correctSentence;
-    public Word[] MiscWords => m_miscWords;
-
-    public bool IsComplete
-    {
-        get
-        {
-            foreach (SentenceWord w in m_correctSentence)
-            {
-                if (!w.Spoken) return false;
-            }
-            return true;
-        }
-    }
+    public Word[] ValidWords => m_validWords;
+    public Word[] InvalidWords => m_invalidWords;
 
     [SerializeField]
-    private SentenceWord[] m_correctSentence;
-
+    private Word[] m_validWords;
     [SerializeField]
-    private Word[] m_miscWords;
+    private Word[] m_invalidWords;
 
-    public void OnEnable()
-    {
-        ResetWords();
-    }
 
-    public void ResetWords()
+    public bool IsValidWord(Word word)
     {
-        foreach (SentenceWord w in m_correctSentence)
+        foreach (Word w in m_validWords)
         {
-            w.Spoken = false;
+            if (w == word) return true;
         }
+        return false;
     }
 
-    public void SpeakWord(Word word)
-    {
-        foreach (SentenceWord w in m_correctSentence)
-        {
-            if (w.Word == word)
-            {
-                w.Spoken = true;
-                return;
-            }
-        }
-    }
 }

@@ -1,9 +1,6 @@
 public enum WordCategory
 {
-    Noun,
+    Subject,
     Verb,
-    Adjective,
-    Adverb,
-    Article,
-    Other,
+    Object
 }

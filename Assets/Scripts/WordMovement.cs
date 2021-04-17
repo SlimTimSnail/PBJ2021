@@ -9,6 +9,12 @@ public class WordMovement : MonoBehaviour
     [SerializeField]
     private bool m_ignoreSpawner;
 
+    [SerializeField]
+    private Vector2 m_constantForce;
+
+    [SerializeField]
+    private bool m_randomStartingRotation;
+
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
@@ -21,5 +27,16 @@ public class WordMovement : MonoBehaviour
         {
             transform.position = GameController.Instance.GetWordSpawnPosition();
         }
+
+        if (m_randomStartingRotation)
+        {
+            float randomRotation = UnityEngine.Random.Range(0f, 360f);
+            transform.eulerAngles = new Vector3(0f, 0f, randomRotation);
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        m_rigidbody.AddForce(m_constantForce);
     }
 }

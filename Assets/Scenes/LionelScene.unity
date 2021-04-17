@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &225537619
@@ -686,6 +687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &274486267
@@ -1345,7 +1347,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1980, y: 200}
+  m_Size: {x: 1920, y: 200}
   m_EdgeRadius: 0
 --- !u!114 &596954650
 MonoBehaviour:
@@ -2212,6 +2214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &1005087623
@@ -2555,6 +2558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &1146187466
@@ -2895,6 +2899,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &1397461454
@@ -3766,6 +3771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &2070271241
@@ -3887,6 +3893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &2083582757
@@ -4008,6 +4015,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &2114072540
@@ -4129,6 +4137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_ignoreSpawner: 1
+  m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
 --- !u!61 &2114326363

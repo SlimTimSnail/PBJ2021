@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.Networking;
 
 [RequireComponent(typeof(AudioSource))]
 public class TextToSpeech : MonoBehaviour
@@ -21,17 +22,32 @@ public class TextToSpeech : MonoBehaviour
     }
     private IEnumerator GetTTS(string textToSpeechWords)
     {
-        Debug.Log(textToSpeechWords);
-        // Remove the "spaces" in excess
-        Regex rgx = new Regex("\\s+");
-        // Replace the "spaces" with "% 20" for the link Can be interpreted
-        string result = rgx.Replace(textToSpeechWords, "%20");
-        Debug.Log(result);
-        string url = m_urlPrefix + result;
-        WWW www = new WWW(url);
-        yield return www;
-        m_audioSource.clip = www.GetAudioClip(false, true, AudioType.MPEG);
-        m_audioSource.Play();
-        Debug.Log("TextToSpeech");
+        string url = m_urlPrefix + UnityWebRequest.EscapeURL(textToSpeechWords);
+        Debug.LogFormat("TTS with Url = {0}", url);
+        using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
+        {
+            yield return www.SendWebRequest();
+
+            if (www.result == UnityWebRequest.Result.ConnectionError)
+            {
+                Debug.LogFormat("TTS error: {0}", www.error);
+                m_audioSource.clip = null;
+            }
+            else
+            {
+                Debug.Log("TTS request successful");
+                AudioClip clip = DownloadHandlerAudioClip.GetContent(www);
+                if (clip != null)
+                {
+                    m_audioSource.clip = DownloadHandlerAudioClip.GetContent(www);
+                    m_audioSource.Play();
+                }
+                else
+                {
+                    Debug.LogError("TTS result null");
+                }
+            }
+
+        }
     }
 }

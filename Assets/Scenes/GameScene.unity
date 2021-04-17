@@ -646,14 +646,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7592728719184101364, guid: 89cbf835595be3348a9de7f76028aacd, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7592728719184101364, guid: 89cbf835595be3348a9de7f76028aacd, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7592728719925878978, guid: 89cbf835595be3348a9de7f76028aacd, type: 3}
       propertyPath: m_Name
       value: Game_Canvas

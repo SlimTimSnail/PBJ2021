@@ -35,7 +35,6 @@ public class PlayerMovement : MonoBehaviour
         if (m_movementActionHeld && !(m_movementLastInputValue == new Vector2(0, 0)))
         {
             Vector2 movement = m_movementLastInputValue * m_movementSpeed * MOVEMENT_TO_FORCE_MULTIPLIER * Time.deltaTime;
-            //transform.Translate(movement);
             m_rigidbody.AddForce(movement);
         }
     }
@@ -45,19 +44,19 @@ public class PlayerMovement : MonoBehaviour
         if (context.started)
         {
             //code for when action starts (key down)
-            Debug.Log("Move Input Started");
+            //Debug.Log("Move Input Started");
             m_movementActionHeld = true;
         }
         else if (context.performed)
         {
             //code for when action is executed
-            Debug.Log("Move Input Performed");
+            //Debug.Log("Move Input Performed");
             m_movementLastInputValue = context.ReadValue<Vector2>();
         }
         else if (context.canceled)
         {
             //code for when action is completed or stopped (key up)
-            Debug.Log("Move Input Cancelled");
+            //Debug.Log("Move Input Cancelled");
             m_movementActionHeld = false;
         }
     }

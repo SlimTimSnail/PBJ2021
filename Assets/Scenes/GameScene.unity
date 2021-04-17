@@ -130,6 +130,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1360503291}
     m_Modifications:
+    - target: {fileID: 6989437806352971446, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
+      propertyPath: m_ignoreSpawner
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
       propertyPath: m_Name
       value: Word (1)
@@ -232,6 +236,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1360503291}
     m_Modifications:
+    - target: {fileID: 6989437806352971446, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
+      propertyPath: m_ignoreSpawner
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
       propertyPath: m_Name
       value: Word (2)
@@ -555,6 +563,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1360503291}
     m_Modifications:
+    - target: {fileID: 6989437806352971446, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
+      propertyPath: m_ignoreSpawner
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 88e27c0e6ebc5904384a9508cb7dc998, type: 3}
       propertyPath: m_Name
       value: Word

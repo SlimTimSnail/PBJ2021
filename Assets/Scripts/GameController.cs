@@ -24,6 +24,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private SpawnController m_playerSpawnController;
     public Vector3 GetPlayerSpawnPosition() => m_playerSpawnController.GetSpawnPosition();
+
+    [SerializeField]
+    private SpawnController m_wordSpawnController;
+    public Vector3 GetWordSpawnPosition() => m_wordSpawnController.GetSpawnPosition();
     #endregion
 
     // Start is called before the first frame update

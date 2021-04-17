@@ -18,16 +18,20 @@ public class PlayerMovement : MonoBehaviour
     // Constants
     private const float MOVEMENT_TO_FORCE_MULTIPLIER = 500f;
 
+    [SerializeField]
+    private bool m_ignoreSpawner;
+
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
-
-        transform.SetParent(GameController.Instance.PlayerParent, false);
-        transform.position = GameController.Instance.GetPlayerSpawnPosition();
     }
     void Start()
     {
-        
+        transform.SetParent(GameController.Instance.PlayerParent, false);
+        if (!m_ignoreSpawner)
+        {
+            transform.position = GameController.Instance.GetPlayerSpawnPosition();
+        }
     }
 
     void Update()

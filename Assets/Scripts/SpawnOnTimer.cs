@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(SpawnWhichObject))]
 public class SpawnOnTimer : MonoBehaviour
 {
-    private SpawnWhichObject m_spawnWhichObject;
+    private IGetSpawnObject m_spawnWhichObject;
 
     [SerializeField]
     private float m_secondsInterval;
@@ -19,7 +18,7 @@ public class SpawnOnTimer : MonoBehaviour
     private void Awake()
     {
         m_nextTime = Time.time + m_secondsInterval;
-        m_spawnWhichObject = GetComponent<SpawnWhichObject>();
+        m_spawnWhichObject = GetComponent<IGetSpawnObject>();
     }
 
     // Update is called once per frame

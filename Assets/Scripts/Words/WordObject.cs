@@ -11,7 +11,12 @@ public class WordObject : MonoBehaviour
     private Text m_text;
 
     private Word m_word;
-    
+
+    private void Awake()
+    {
+        Setup(GameController.Instance.GetNextWordData());
+    }
+
 
     public void Setup(Word word)
     {

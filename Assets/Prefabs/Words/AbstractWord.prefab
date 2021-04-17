@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 4777408703333739584}
   - component: {fileID: 4777408703333739585}
   - component: {fileID: 6989437806352971446}
+  - component: {fileID: 8987589486781496436}
   m_Layer: 11
   m_Name: AbstractWord
   m_TagString: Untagged
@@ -220,3 +221,16 @@ MonoBehaviour:
   m_ignoreSpawner: 0
   m_constantForce: {x: 15, y: 0}
   m_randomStartingRotation: 1
+--- !u!114 &8987589486781496436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8545585747573465428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97850c0d403903e40b2659b066a4d081, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_text: {fileID: 8194661939095303050}

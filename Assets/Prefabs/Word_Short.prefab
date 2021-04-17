@@ -92,7 +92,6 @@ GameObject:
   - component: {fileID: 8545585747573465430}
   - component: {fileID: 4777408703333739584}
   - component: {fileID: 4777408703333739585}
-  - component: {fileID: 6989437806352971446}
   m_Layer: 5
   m_Name: Word_Short
   m_TagString: Untagged
@@ -170,9 +169,9 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 5
-  m_AngularDrag: 5
+  m_Mass: 2
+  m_LinearDrag: 1
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -205,17 +204,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 50, y: 50}
   m_EdgeRadius: 0
---- !u!114 &6989437806352971446
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8545585747573465428}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d494be4816027494a8643f457eabfb81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ignoreSpawner: 0
-  m_constantForce: {x: 0, y: 0}

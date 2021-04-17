@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Mass
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_LinearDrag
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_AngularDrag
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Size.x
       value: 50

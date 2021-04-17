@@ -7,9 +7,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Text
+      value: Medium
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
-      value: AbstractWord 1
+      value: Word_Medium
       objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_RootOrder

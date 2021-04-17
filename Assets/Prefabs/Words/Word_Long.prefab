@@ -11,9 +11,13 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 300
       objectReference: {fileID: 0}
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Text
+      value: Long Long Long
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
-      value: Word_Long_1
+      value: Word_Long
       objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_RootOrder

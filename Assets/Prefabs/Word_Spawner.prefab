@@ -76,4 +76,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6ad81c42327cb4eb9a72ccffa4ca03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_secondsInterval: 3
+  m_secondsInterval: 5

@@ -9,6 +9,9 @@ public class WordMovement : MonoBehaviour
     [SerializeField]
     private bool m_ignoreSpawner;
 
+    [SerializeField]
+    private Vector2 m_constantForce;
+
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
@@ -21,5 +24,10 @@ public class WordMovement : MonoBehaviour
         {
             transform.position = GameController.Instance.GetWordSpawnPosition();
         }
+    }
+
+    private void FixedUpdate()
+    {
+        m_rigidbody.AddForce(m_constantForce);
     }
 }

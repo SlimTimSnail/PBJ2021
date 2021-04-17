@@ -35,7 +35,7 @@ public class GameController : MonoBehaviour
 
     [SerializeField]
     private WordDataManager m_wordDataManager;
-    public Word GetNextWordData() => m_wordDataManager.GetNextWordData();
+    public Word GetNextWordData(WordObject.WordLength length) => m_wordDataManager.GetNextWordData(length);
     #endregion
 
     // Start is called before the first frame update

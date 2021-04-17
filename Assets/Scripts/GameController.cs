@@ -28,6 +28,10 @@ public class GameController : MonoBehaviour
     [SerializeField]
     private SpawnController m_wordSpawnController;
     public Vector3 GetWordSpawnPosition() => m_wordSpawnController.GetSpawnPosition();
+
+    [SerializeField]
+    private SentenceManager m_sentenceManager;
+    public SentenceManager SentenceManager => m_sentenceManager;
     #endregion
 
     // Start is called before the first frame update

@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GoalForWords : MonoBehaviour
 {
-
+    [SerializeField]
+    private TextToSpeech m_textToSpeech;
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
@@ -12,6 +13,7 @@ public class GoalForWords : MonoBehaviour
         if (word != null)
         {
             GameController.Instance.SentenceManager.WordScored(word.Word);
+            m_textToSpeech.RunTTS(word.Word.Text);
             Destroy(collision.gameObject);
         }
 

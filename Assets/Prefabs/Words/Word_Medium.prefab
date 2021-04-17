@@ -7,10 +7,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 70dc97f73a68afa46872921d12c62ad9, type: 2}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Size.x
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Size.y
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_initialForce.x
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_constantForce.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Text
       value: Medium
       objectReference: {fileID: 0}
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: f9904d63c95822d418b04789af31e091, type: 3}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
       value: Word_Medium
@@ -18,6 +58,14 @@ PrefabInstance:
     - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_LocalPosition.x
@@ -42,6 +90,10 @@ PrefabInstance:
     - target: {fileID: 8545585747573465429, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8987589486781496436, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_length
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3806886461756387966}
   - component: {fileID: 3806886461756387964}
   - component: {fileID: 3806886461756387965}
+  - component: {fileID: 8316984562847920523}
   m_Layer: 5
   m_Name: Player 2(Green)
   m_TagString: Player
@@ -67,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 7162066898924093359, guid: a0edcb733d706db4c8ad34f6aa272611, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -75,3 +76,22 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &8316984562847920523
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3806886461756387967}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c761f816ce3f4e2b80038c2b61a6952, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

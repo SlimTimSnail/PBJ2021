@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Banana
   m_EditorClassIdentifier: 
   m_text: Banana
-  m_categories: 00000000
+  m_category: 2
   m_tags:
   - Object
   - Food
   - Yellow
   - Fruit
   m_points: 1
-  m_weight: 1
+  m_weight: 2

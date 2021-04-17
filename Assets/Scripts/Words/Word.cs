@@ -1,13 +1,25 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class Word :ScriptableObject
+public class Word : ScriptableObject
 {
     public string Text => m_text;
     public float Points => m_points;
     public float Weight => m_weight;
     public WordCategory Category => m_category;
     public int Size => m_size;
+
+    public WordObject.WordLength Length { get {
+            switch (m_text.Length)
+            {
+                case int length when length < 4:
+                    return WordObject.WordLength.Short;
+                case int length when length < 8:
+                    return WordObject.WordLength.Medium;
+                default:
+                    return WordObject.WordLength.Long;
+            }
+    } }
 
     public int MatchTags(Word other)
     {

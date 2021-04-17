@@ -10,6 +10,9 @@ public class WordMovement : MonoBehaviour
     private bool m_ignoreSpawner;
 
     [SerializeField]
+    private Vector2 m_initialForce;
+
+    [SerializeField]
     private Vector2 m_constantForce;
 
     [SerializeField]
@@ -26,6 +29,7 @@ public class WordMovement : MonoBehaviour
         if (!m_ignoreSpawner)
         {
             transform.position = GameController.Instance.GetWordSpawnPosition();
+            m_rigidbody.AddForce(m_initialForce * m_rigidbody.mass);
         }
 
         if (m_randomStartingRotation)
@@ -37,6 +41,6 @@ public class WordMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        m_rigidbody.AddForce(m_constantForce);
+        m_rigidbody.AddForce(m_constantForce * m_rigidbody.mass);
     }
 }

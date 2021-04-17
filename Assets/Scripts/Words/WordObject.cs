@@ -5,13 +5,27 @@ using UnityEngine.UI;
 
 public class WordObject : MonoBehaviour
 {
+    public enum WordLength
+    {
+        Short,
+        Medium,
+        Long,
+    }
+    [SerializeField]
+    private WordLength m_length;
+
     public  Word Word => m_word;
 
     [SerializeField]
     private Text m_text;
 
     private Word m_word;
-    
+
+    private void Awake()
+    {
+        Setup(GameController.Instance.GetNextWordData(m_length));
+    }
+
 
     public void Setup(Word word)
     {

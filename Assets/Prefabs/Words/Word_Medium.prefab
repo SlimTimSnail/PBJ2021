@@ -29,11 +29,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Size.x
-      value: 250
+      value: 240
       objectReference: {fileID: 0}
     - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Size.y
-      value: 100
+      value: 85
       objectReference: {fileID: 0}
     - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_initialForce.x

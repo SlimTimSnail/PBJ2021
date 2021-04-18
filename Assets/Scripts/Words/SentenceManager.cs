@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,21 +11,23 @@ public class SentenceManager : MonoBehaviour
     private UnityEvent m_sentenceComplete;
 
     [SerializeField]
-    public Action<List<Word>, SentenceState> WordScoredEvent;
+    public System.Action<List<Word>, SentenceState> WordScoredEvent;
 
 
     public Sentence CurrentSentence => m_sentences[m_currentSentence];
     private int m_currentSentence = -1;
 
-    private WordPool m_shortWordPool;
-    private WordPool m_mediumWordPool;
-    private WordPool m_longWordPool;
+    private WordPool m_subjectPool;
+    private WordPool m_verbPool;
+    private WordPool m_objectPool;
+    private Word m_currentWord;
 
     private List<Word> m_formedSentence;
     private bool m_subjectSpoken;
     private bool m_verbSpoken;
     private bool m_objectSpoken;
     private bool m_correctOrder;
+    private int m_nextWord = 0;
     private int m_points;
 
     // Start is called before the first frame update
@@ -40,62 +41,78 @@ public class SentenceManager : MonoBehaviour
         ++m_currentSentence;
         m_formedSentence = new List<Word>();
 
-        m_shortWordPool = new WordPool();
-        m_mediumWordPool = new WordPool();
-        m_longWordPool = new WordPool();
+        m_subjectPool = new WordPool();
+        m_verbPool = new WordPool();
+        m_objectPool = new WordPool();
 
         foreach (Word w in CurrentSentence.ValidWords)
         {
-            switch (w.Length)
+            switch (w.Category)
             {
-                case WordLength.Short:
-                    m_shortWordPool.AddWord(w);
+                case WordCategory.Subject:
+                    m_subjectPool.AddWord(w);
                     break;
-                case WordLength.Medium:
-                    m_mediumWordPool.AddWord(w);
+                case WordCategory.Verb:
+                    m_verbPool.AddWord(w);
                     break;
-                case WordLength.Long:
-                    m_longWordPool.AddWord(w);
+                case WordCategory.Object:
+                    m_objectPool.AddWord(w);
                     break;
             }
         }
         foreach (Word w in CurrentSentence.InvalidWords)
         {
-            switch (w.Length)
+            switch (w.Category)
             {
-                case WordLength.Short:
-                    m_shortWordPool.AddWord(w);
+                case WordCategory.Subject:
+                    m_subjectPool.AddWord(w);
                     break;
-                case WordLength.Medium:
-                    m_mediumWordPool.AddWord(w);
+                case WordCategory.Verb:
+                    m_verbPool.AddWord(w);
                     break;
-                case WordLength.Long:
-                    m_longWordPool.AddWord(w);
+                case WordCategory.Object:
+                    m_objectPool.AddWord(w);
                     break;
             }
         }
 
-        m_shortWordPool.Shuffle();
-        m_mediumWordPool.Shuffle();
-        m_longWordPool.Shuffle();      
+        m_subjectPool.Shuffle();
+        m_verbPool.Shuffle();
+        m_objectPool.Shuffle();      
 
         m_subjectSpoken = false;
         m_verbSpoken = false;
         m_objectSpoken = false;
         m_correctOrder = true;
+
+        m_nextWord = Random.Range(0, 3);
+        GetNextWord();
     }
 
-    public Word GetNextWord(WordLength length)
+    public WordLength GetNextWordLength()
     {
-        switch (length)
+        return m_currentWord.Length;
+    }
+
+    public Word GetNextWord()
+    {
+        Word ret = m_currentWord;
+
+        switch (m_nextWord)
         {
-            case WordLength.Short:
-                return m_shortWordPool.NextWord();
-            case WordLength.Long:
-                return m_longWordPool.NextWord();
-            default:
-                return m_mediumWordPool.NextWord();          
+            case 0:
+                m_currentWord = m_subjectPool.NextWord();
+                break;
+            case 1:
+                m_currentWord = m_verbPool.NextWord();
+                break;
+            case 2:
+                m_currentWord = m_objectPool.NextWord();
+                break;
         }
+        m_nextWord = (m_nextWord + 1) % 3;
+
+        return ret;
     }
 
     

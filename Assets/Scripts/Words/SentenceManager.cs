@@ -47,6 +47,34 @@ public class SentenceManager : MonoBehaviour
     [SerializeField]
     private int m_losePointThreshold;
 
+    public void OnEnable()
+    {
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
+    }
+    public void OnDisable()
+    {
+        GameController.Instance.GameStateEnterEvent -= OnGameStateEntered;
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                break;
+            case GameState.Playing:
+                break;
+            case GameState.Win_Level:
+                NewSentence();
+                break;
+            case GameState.Lose_Level:
+                NewSentence();
+                break;
+            default:
+                break;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

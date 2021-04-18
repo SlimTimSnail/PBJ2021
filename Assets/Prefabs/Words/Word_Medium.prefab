@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!60 &6114266841243357589
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843490033076041618}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 95.05005, y: -20.496101}
+      - {x: 96.04297, y: 17.924763}
+      - {x: -0.791687, y: 37.522446}
+      - {x: -96.306946, y: 17.638557}
+      - {x: -96.49676, y: -19.960121}
+      - {x: -1.4259615, y: -40.38043}
 --- !u!1001 &1891978409636107974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -56,8 +87,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 12800000, guid: f9904d63c95822d418b04789af31e091, type: 3}
     - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 80
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
@@ -99,9 +134,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8545585747573465430, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545585747573465430, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5cc1477abd93774478e1eba049f666a6, type: 3}
     - target: {fileID: 8987589486781496436, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_length
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+--- !u!1 &7843490033076041618 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+  m_PrefabInstance: {fileID: 1891978409636107974}
+  m_PrefabAsset: {fileID: 0}

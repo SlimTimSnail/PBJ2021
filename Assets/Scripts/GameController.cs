@@ -32,6 +32,10 @@ public class GameController : MonoBehaviour
     public Vector3 GetWordSpawnPosition() => m_wordSpawnController.GetSpawnPosition();
 
     [SerializeField]
+    private SpawnController m_bombSpawnController;
+    public Vector3 GetBombSpawnPosition() => m_bombSpawnController.GetSpawnPosition();
+
+    [SerializeField]
     private SentenceManager m_sentenceManager;
     public SentenceManager SentenceManager => m_sentenceManager;
 

@@ -236,6 +236,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4989721273647738378, guid: 1962fb56aa1a4104b8da9e53a19a8e4f, type: 3}
   m_PrefabInstance: {fileID: 1802050805126501819}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7823757671128607843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8471756395855624664, guid: 1962fb56aa1a4104b8da9e53a19a8e4f, type: 3}
+  m_PrefabInstance: {fileID: 1802050805126501819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 646622def523547429e7c2b6c0f1bdb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3743104578490283061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -514,6 +525,14 @@ PrefabInstance:
     - target: {fileID: 4763272407673083790, guid: 8fa03f6a354f2844e81fbd875a2e6698, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4763272407673083791, guid: 8fa03f6a354f2844e81fbd875a2e6698, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 7823757671128607843}
+    - target: {fileID: 4763272407673083791, guid: 8fa03f6a354f2844e81fbd875a2e6698, type: 3}
+      propertyPath: m_PlayerJoinedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayerJoined
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fa03f6a354f2844e81fbd875a2e6698, type: 3}

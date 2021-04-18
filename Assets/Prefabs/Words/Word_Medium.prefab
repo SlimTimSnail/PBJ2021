@@ -43,6 +43,10 @@ PrefabInstance:
       propertyPath: m_constantForce.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_movementPatternData
+      value: 
+      objectReference: {fileID: 11400000, guid: b3ddff7456713e445ae0d042e7fb4fde, type: 2}
     - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Text
       value: Medium

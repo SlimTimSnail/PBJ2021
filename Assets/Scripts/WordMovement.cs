@@ -18,6 +18,11 @@ public class WordMovement : MonoBehaviour
     [SerializeField]
     private bool m_randomStartingRotation;
 
+    [SerializeField]
+    private ForcePatternData m_movementPatternData;
+
+    private float m_forcePatternTime;
+
     private void Awake()
     {
         m_rigidbody = GetComponent<Rigidbody2D>();
@@ -25,6 +30,8 @@ public class WordMovement : MonoBehaviour
 
     private void Start()
     {
+        m_forcePatternTime = UnityEngine.Random.Range(0f, 1f);
+
         transform.SetParent(GameController.Instance.WordParent, false);
         if (!m_ignoreSpawner)
         {
@@ -42,5 +49,16 @@ public class WordMovement : MonoBehaviour
     private void FixedUpdate()
     {
         m_rigidbody.AddForce(m_constantForce * m_rigidbody.mass);
+
+        if (m_movementPatternData != null)
+        {
+            Vector2 forcePatternNow = m_movementPatternData.GetForceAtTime(m_forcePatternTime);
+            m_rigidbody.AddForce(forcePatternNow);
+        }
+    }
+
+    private void Update()
+    {
+        m_forcePatternTime += Time.deltaTime;
     }
 }

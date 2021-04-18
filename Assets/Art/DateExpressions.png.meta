@@ -1,7 +1,22 @@
 fileFormatVersion: 2
 guid: e0bf8202c2eeaf1419a924d676257de6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7573911595463407514
+    second: DateExpressions_0
+  - first:
+      213: -2724025857007345015
+    second: DateExpressions_1
+  - first:
+      213: 8333831796399749840
+    second: DateExpressions_2
+  - first:
+      213: -4959392919860814194
+    second: DateExpressions_3
+  - first:
+      213: -3074989203965827862
+    second: DateExpressions_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +56,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -75,9 +90,126 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: DateExpressions_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 450
+        width: 195
+        height: 210
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6680130488f04e690800000000000000
+      internalID: -7573911595463407514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DateExpressions_1
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 450
+        width: 195
+        height: 210
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98229126ae0523ad0800000000000000
+      internalID: -2724025857007345015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DateExpressions_2
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 240
+        width: 195
+        height: 210
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da33424dd7b7a370800000000000000
+      internalID: 8333831796399749840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DateExpressions_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 195
+        height: 210
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8edb165a62bc2bb0800000000000000
+      internalID: -4959392919860814194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DateExpressions_4
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 15
+        width: 195
+        height: 210
+      alignment: 4
+      pivot: {x: 0, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4a4796c917355d0800000000000000
+      internalID: -3074989203965827862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

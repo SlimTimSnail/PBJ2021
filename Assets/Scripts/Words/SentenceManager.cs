@@ -77,7 +77,7 @@ public class SentenceManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NewSentence();
+
     }
 
     public void NewSentence()

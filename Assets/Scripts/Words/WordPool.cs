@@ -31,13 +31,14 @@ public class WordPool : IEnumerable<Word>
             m_words.RemoveAt(index);
         }
         m_words = newPool;
+        m_currentWord = -1;
     }
 
     public Word NextWord()
     {
-        if (Count == 0) return null;
+        m_currentWord++;
+        if (m_currentWord >= Count) return null;
 
-        m_currentWord = (m_currentWord + 1) % m_words.Count;
         return m_words[m_currentWord];
     }
 

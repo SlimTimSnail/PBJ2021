@@ -7,8 +7,9 @@ public class GoalForWords : MonoBehaviour
     [SerializeField]
     private TextToSpeech m_textToSpeech;
     [SerializeField]
-    private GameObject m_blocker;
-
+    private GameObject m_closed;
+    [SerializeField]
+    private GameObject m_open;
 
     private void Start()
     {
@@ -17,7 +18,9 @@ public class GoalForWords : MonoBehaviour
 
     void OnGameStateChange(GameState state)
     {
-        m_blocker.SetActive(state != GameState.Playing);
+        bool open = state == GameState.Playing;
+        m_open.SetActive(open);
+        m_closed.SetActive(!open);
     }
 
     public void OnTriggerEnter2D(Collider2D collision)

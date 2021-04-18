@@ -12,7 +12,7 @@ public class SentenceManager : MonoBehaviour
     private UnityEvent m_sentenceComplete;
 
     [SerializeField]
-    public Action<List<Word>> WordScoredEvent;
+    public Action<List<Word>, SentenceState> WordScoredEvent;
 
 
     public Sentence CurrentSentence => m_sentences[m_currentSentence];
@@ -81,7 +81,7 @@ public class SentenceManager : MonoBehaviour
 
         m_subjectSpoken = false;
         m_verbSpoken = false;
-        m_correctOrder = false;
+        m_objectSpoken = false;
         m_correctOrder = true;
     }
 
@@ -130,21 +130,28 @@ public class SentenceManager : MonoBehaviour
                     m_correctOrder = false;
                     isValid = false;
                 }
+                m_objectSpoken = true;
                 break;
         }
 
         if (isValid)
             ++m_points;
 
-
+        SentenceState sentenceState = SentenceState.Incomplete;
         if (m_subjectSpoken && m_verbSpoken && m_objectSpoken)
         {
+            sentenceState = SentenceState.Complete;
             if (m_correctOrder)
                 ++m_points;
             m_sentenceComplete.Invoke();
         }
 
-        WordScoredEvent?.Invoke(m_formedSentence);
+        WordScoredEvent?.Invoke(m_formedSentence, sentenceState);
     }
 
+}
+public enum SentenceState
+{
+    Incomplete,
+    Complete,
 }

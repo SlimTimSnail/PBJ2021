@@ -25,21 +25,44 @@ public class PopulateAnswerText : MonoBehaviour
         GameController.Instance.SentenceManager.WordScoredEvent -= WordScored;
     }
 
-    private void WordScored(List<Word> currentSentence)
+    private void WordScored(List<Word> currentSentence, SentenceState sentenceState)
+    {
+        string sentenceToDisplay = BuildSentenceString(currentSentence, sentenceState);
+        m_text.text = sentenceToDisplay;
+    }
+
+    private string BuildSentenceString(List<Word> currentSentence, SentenceState sentenceState)
     {
         m_sentenceBuilder.Clear();
         for (int i = 0; i < currentSentence.Count; i++)
         {
+            string wordString = currentSentence[i].Text;
             if (i == 0)
             {
-                m_sentenceBuilder.Append(m_textInfo.ToTitleCase(m_textInfo.ToLower(currentSentence[i].Text)));
+                if (wordString.Length == 1)
+                {
+                    m_sentenceBuilder.Append(wordString);
+                }
+                else
+                {
+                    m_sentenceBuilder.Append(m_textInfo.ToTitleCase(m_textInfo.ToLower(wordString)));
+                }
             }
             else
             {
                 m_sentenceBuilder.Append(" ");
-                m_sentenceBuilder.Append(m_textInfo.ToLower(currentSentence[i].Text));
+                m_sentenceBuilder.Append(m_textInfo.ToLower(wordString));
+
+                if (i == currentSentence.Count - 1)
+                {
+                    if (sentenceState == SentenceState.Complete)
+                    {
+                        m_sentenceBuilder.Append(".");
+                    }
+                }
             }
         }
-        m_text.text = m_sentenceBuilder.ToString();
+
+        return m_sentenceBuilder.ToString();
     }
 }

@@ -221,7 +221,7 @@ SpriteRenderer:
   m_Size: {x: 25.13078, y: 18.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &16034583
@@ -687,7 +687,7 @@ RectTransform:
   m_LocalScale: {x: 1.4, y: 1.4, z: 1}
   m_Children: []
   m_Father: {fileID: 1198701743}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -714,9 +714,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d1e4ac4fbfa3064e90c1971121ef426, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b53a2c9f072c24b2faa3b6397bf1889b, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -845,11 +845,11 @@ RectTransform:
   - {fileID: 367220145}
   - {fileID: 717055617}
   m_Father: {fileID: 1198701743}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -455, y: -69.77283}
+  m_AnchoredPosition: {x: -455, y: -0.00061035}
   m_SizeDelta: {x: -1115.0422, y: -237.7269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &712509687
@@ -865,7 +865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1769,8 +1769,8 @@ RectTransform:
   - {fileID: 1432360301}
   - {fileID: 966729363}
   - {fileID: 2001764933}
-  - {fileID: 712509686}
   - {fileID: 530947876}
+  - {fileID: 712509686}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

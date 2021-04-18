@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6503fcf8f2a62054ba08158200ffa5af, type: 3}
   m_Name: Drink
   m_EditorClassIdentifier: 
-  m_text: Drink
+  m_text: DRINK
   m_category: 1
   m_tags: []
   m_points: 1
   m_weight: 1
+  m_size: 0

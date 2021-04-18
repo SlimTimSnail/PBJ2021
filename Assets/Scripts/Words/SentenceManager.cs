@@ -20,6 +20,8 @@ public class SentenceManager : MonoBehaviour
     public System.Action<string> NewSentenceEvent;
     [SerializeField]
     public System.Action<List<Word>, SentenceState> WordScoredEvent;
+    [SerializeField]
+    public System.Action<int> PointsEvent;
 
 
     private int m_currentSentence = -1;
@@ -40,7 +42,7 @@ public class SentenceManager : MonoBehaviour
     private bool m_correctOrder;
     
     private int m_nextWord = 0;
-    private int m_points;
+    private int m_points = 0;
 
     [SerializeField]
     private int m_losePointThreshold;
@@ -145,24 +147,29 @@ public class SentenceManager : MonoBehaviour
             case WordCategory.Subject:
                 if (m_subjectSpoken)
                 {
-                    m_correctOrder = false;
                     isValid = false;
                 }
                 m_subjectSpoken = true;
                 break;
             case WordCategory.Verb:
-                if (m_verbSpoken || !m_subjectSpoken)
+                if (m_verbSpoken)
+                {
+                    isValid = false;
+                }
+                if (!m_subjectSpoken)
                 {
                     m_correctOrder = false;
-                    isValid = false;
                 }
                 m_verbSpoken = true;
                 break;
             case WordCategory.Object:
-                if (m_objectSpoken || !m_subjectSpoken || !m_verbSpoken)
+                if (m_objectSpoken)
+                {
+                    isValid = false;            
+                }
+                if (!m_subjectSpoken || !m_verbSpoken)
                 {
                     m_correctOrder = false;
-                    isValid = false;
                 }
                 m_objectSpoken = true;
                 break;
@@ -170,12 +177,19 @@ public class SentenceManager : MonoBehaviour
 
         if (isValid)
             ++m_points;
+        else
+            --m_points;
+
+        PointsEvent?.Invoke(m_points);
 
         if (m_subjectSpoken && m_verbSpoken && m_objectSpoken)
         {
             m_sentenceState = SentenceState.Complete;
             if (m_correctOrder)
+            {
                 ++m_points;
+                PointsEvent?.Invoke(m_points);
+            }
             m_sentenceComplete.Invoke();
         }
 

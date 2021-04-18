@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -3074989203965827862, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  m_Sprite: {fileID: 8333831796399749840, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -165,9 +165,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sprites:
-  - {fileID: -7573911595463407514, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
-  - {fileID: -2724025857007345015, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
-  - {fileID: 8333831796399749840, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
-  - {fileID: -4959392919860814194, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
-  - {fileID: -3074989203965827862, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  - m_sprite: {fileID: -3074989203965827862, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+    m_maxThreshold: -6
+  - m_sprite: {fileID: -4959392919860814194, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+    m_maxThreshold: -3
+  - m_sprite: {fileID: -7573911595463407514, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+    m_maxThreshold: 0
+  - m_sprite: {fileID: -2724025857007345015, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+    m_maxThreshold: 4
+  - m_sprite: {fileID: 8333831796399749840, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+    m_maxThreshold: 6
   m_expression: 4

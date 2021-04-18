@@ -4452,6 +4452,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4447528432980380413, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447528432980380413, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447528432980380413, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -45
+      objectReference: {fileID: 0}
+    - target: {fileID: 4447528432980380413, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5760826051321512676, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6222461216613684204, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591618491418664471, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -64.99994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
 --- !u!114 &2070275910578830519 stripped

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public enum SentenceState
 {
@@ -84,6 +85,13 @@ public class SentenceManager : MonoBehaviour
     public void NewSentence()
     {
         ++m_currentSentence;
+
+        if (m_currentSentence >= m_sentences.Length)
+        {
+            SceneManager.LoadScene("StartScene");
+            return;
+        }
+
         m_formedSentence = new List<Word>();
 
         m_subjectPool = new WordPool();

@@ -50,4 +50,4 @@ MonoBehaviour:
   m_sentenceComplete:
     m_PersistentCalls:
       m_Calls: []
-  m_losePointThreshold: -100
+  m_losePointThreshold: -5

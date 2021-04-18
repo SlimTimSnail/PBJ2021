@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Buildings
   m_EditorClassIdentifier: 
   m_text: BUILDINGS
-  m_category: 0
+  m_category: 2
   m_tags: []
   m_points: 1
   m_weight: 1

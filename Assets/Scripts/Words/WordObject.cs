@@ -24,11 +24,6 @@ public class WordObject : MonoBehaviour
 
     private Word m_word;
 
-    private void Awake()
-    {
-        Setup(GameController.Instance.SentenceManager.GetNextWord(m_length));
-    }
-
 
     public void Setup(Word word)
     {

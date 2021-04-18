@@ -3,9 +3,12 @@ using UnityEngine;
 [CreateAssetMenu]
 public class Sentence : ScriptableObject
 {
+    public string Question => m_question;
     public Word[] ValidWords => m_validWords;
     public Word[] InvalidWords => m_invalidWords;
 
+    [SerializeField]
+    private string m_question;
     [SerializeField]
     private Word[] m_validWords;
     [SerializeField]

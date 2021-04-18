@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6698654513457113829}
   - component: {fileID: 5513562044371009389}
-  - component: {fileID: 805490370}
-  - component: {fileID: 805490371}
+  - component: {fileID: 8960173513577084673}
   m_Layer: 0
   m_Name: Word_Spawner
   m_TagString: Untagged
@@ -50,7 +49,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
---- !u!114 &805490370
+--- !u!114 &8960173513577084673
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59,23 +58,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 8347572369977581437}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b029d95309359c4882d6f541d72e3fe, type: 3}
+  m_Script: {fileID: 11500000, guid: a50f91ca1f2f9874db1b7eb16d95d200, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_objectsToChooseFrom:
-  - {fileID: 835259324039223612, guid: ae95bdf07fb7dcd4b9832e8dfae640d0, type: 3}
-  - {fileID: 7843490033076041618, guid: e5936e3a2593dfb4f8c36cba07da93dc, type: 3}
-  - {fileID: 4093075846419487392, guid: 3a61aab04a771fc4b845dbaa6afc17d3, type: 3}
---- !u!114 &805490371
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8347572369977581437}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed6ad81c42327cb4eb9a72ccffa4ca03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_shortWord: {fileID: 835259324039223612, guid: ae95bdf07fb7dcd4b9832e8dfae640d0, type: 3}
+  m_medWord: {fileID: 7843490033076041618, guid: e5936e3a2593dfb4f8c36cba07da93dc, type: 3}
+  m_longWord: {fileID: 4093075846419487392, guid: 3a61aab04a771fc4b845dbaa6afc17d3, type: 3}
   m_secondsInterval: 2.5

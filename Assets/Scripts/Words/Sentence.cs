@@ -8,6 +8,8 @@ public class Sentence : ScriptableObject
     public Word[] InvalidWords => m_invalidWords;
 
     [SerializeField]
+    private string[] m_responses;
+    [SerializeField]
     private string m_question;
     [SerializeField]
     private Word[] m_validWords;

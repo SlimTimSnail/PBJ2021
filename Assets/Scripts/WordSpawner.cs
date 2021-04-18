@@ -45,6 +45,9 @@ public class WordSpawner : MonoBehaviour
         if (m_manager.SentenceState == SentenceState.Complete) return;
 
         Word word = m_manager.GetNextWord();
+        if (word == null) return;
+
+
         GameObject prefab = null;
         switch (word.Length)
         {

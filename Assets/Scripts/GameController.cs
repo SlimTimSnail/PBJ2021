@@ -72,6 +72,39 @@ public class GameController : MonoBehaviour
         Debug.Log("Player Joined");
         CurrentGameState = GameState.Playing;
     }
+    private void OnEnable()
+    {
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
+    }
+    private void OnDisable()
+    {
+        GameController.Instance.GameStateEnterEvent -= OnGameStateEntered;
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                break;
+            case GameState.Playing:
+                break;
+            case GameState.Win_Level:
+                StartCoroutine(MoveToStateCoroutine(5f));
+                break;
+            case GameState.Lose_Level:
+                StartCoroutine(MoveToStateCoroutine(5f));
+                break;
+            default:
+                break;
+        }
+    }
+
+    private IEnumerator MoveToStateCoroutine(float delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        CurrentGameState = GameState.Playing;
+    }
 }
 
 public enum GameState

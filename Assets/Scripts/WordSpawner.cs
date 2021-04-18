@@ -24,6 +24,8 @@ public class WordSpawner : MonoBehaviour
 
     private void Start()
     {
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
+
         m_nextTime = Time.time + m_secondsInterval;
         m_manager = GameController.Instance.SentenceManager;
     }
@@ -59,5 +61,26 @@ public class WordSpawner : MonoBehaviour
 
         GameObject wordObject = Instantiate(prefab);
         wordObject.GetComponent<WordObject>().Setup(word);
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                enabled = false;
+                break;
+            case GameState.Playing:
+                enabled = true;
+                break;
+            case GameState.Win_Level:
+                enabled = false;
+                break;
+            case GameState.Lose_Level:
+                enabled = false;
+                break;
+            default:
+                break;
+        }
     }
 }

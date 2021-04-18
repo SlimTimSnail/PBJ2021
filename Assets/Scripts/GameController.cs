@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class GameController : MonoBehaviour
 {
@@ -38,11 +39,27 @@ public class GameController : MonoBehaviour
     public Word GetNextWordData(WordLength length) => m_wordDataManager.GetNextWordData(length);
     #endregion
 
+    private GameState m_currentGameState;
+    public GameState CurrentGameState => m_currentGameState;
+
     // Start is called before the first frame update
     void Awake()
     {
-        Instance = this;    
+        Instance = this;
+        m_currentGameState = GameState.Start;
     }
 
+    public void OnPlayerJoined(PlayerInput playerInput)
+    {
+        Debug.Log("Player Joined");
+        m_currentGameState = GameState.Playing;
+    }
+}
 
+public enum GameState
+{
+    Start,
+    Playing,
+    Win_Level,
+    Lose_Level,
 }

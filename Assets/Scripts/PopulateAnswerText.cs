@@ -19,10 +19,36 @@ public class PopulateAnswerText : MonoBehaviour
     private void OnEnable()
     {
         GameController.Instance.SentenceManager.WordScoredEvent += WordScored;
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
     }
     private void OnDisable()
     {
         GameController.Instance.SentenceManager.WordScoredEvent -= WordScored;
+        GameController.Instance.GameStateEnterEvent -= OnGameStateEntered;
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                break;
+            case GameState.Playing:
+                break;
+            case GameState.Win_Level:
+                ResetAnswer();
+                break;
+            case GameState.Lose_Level:
+                ResetAnswer();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void ResetAnswer()
+    {
+        m_text.text = "";
     }
 
     private void WordScored(List<Word> currentSentence, SentenceState sentenceState)

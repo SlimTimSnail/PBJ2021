@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!58 &2608835415652100105
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835259324039223612}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 57.5
 --- !u!1001 &9011539130373453928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -116,8 +132,22 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465430, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8545585747573465430, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 516ab992947550d4192a60846f089781, type: 3}
+    - target: {fileID: 8545585747573465430, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+--- !u!1 &835259324039223612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+  m_PrefabInstance: {fileID: 9011539130373453928}
+  m_PrefabAsset: {fileID: 0}

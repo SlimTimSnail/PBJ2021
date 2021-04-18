@@ -42,6 +42,9 @@ public class SentenceManager : MonoBehaviour
     private int m_nextWord = 0;
     private int m_points;
 
+    [SerializeField]
+    private int m_losePointThreshold;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -107,20 +110,24 @@ public class SentenceManager : MonoBehaviour
     public Word GetNextWord()
     {
         Word ret = m_currentWord;
+        m_currentWord = null;
 
-        switch (m_nextWord)
+        for (int i = 0; i < 3 && m_currentWord == null; ++i)
         {
-            case 0:
-                m_currentWord = m_subjectPool.NextWord();
-                break;
-            case 1:
-                m_currentWord = m_verbPool.NextWord();
-                break;
-            case 2:
-                m_currentWord = m_objectPool.NextWord();
-                break;
+            switch (m_nextWord)
+            {
+                case 0:
+                    m_currentWord = m_subjectPool.NextWord();
+                    break;
+                case 1:
+                    m_currentWord = m_verbPool.NextWord();
+                    break;
+                case 2:
+                    m_currentWord = m_objectPool.NextWord();
+                    break;
+            }
+            m_nextWord = (m_nextWord + 1) % 3;
         }
-        m_nextWord = (m_nextWord + 1) % 3;
 
         return ret;
     }
@@ -173,6 +180,17 @@ public class SentenceManager : MonoBehaviour
         }
 
         WordScoredEvent?.Invoke(m_formedSentence, m_sentenceState);
-    }
 
+        if (m_sentenceState == SentenceState.Complete)
+        {
+            if (m_points <= m_losePointThreshold)
+            {
+                GameController.Instance.CurrentGameState = GameState.Lose_Level;
+            }
+            else
+            {
+                GameController.Instance.CurrentGameState = GameState.Win_Level;
+            }
+        }
+    }
 }

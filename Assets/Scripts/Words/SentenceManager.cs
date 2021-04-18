@@ -11,6 +11,8 @@ public class SentenceManager : MonoBehaviour
     private UnityEvent m_sentenceComplete;
 
     [SerializeField]
+    public System.Action<string> NewSentenceEvent;
+    [SerializeField]
     public System.Action<List<Word>, SentenceState> WordScoredEvent;
 
 
@@ -87,6 +89,8 @@ public class SentenceManager : MonoBehaviour
 
         m_nextWord = Random.Range(0, 3);
         GetNextWord();
+
+        NewSentenceEvent?.Invoke(CurrentSentence.Question);
     }
 
     public WordLength GetNextWordLength()

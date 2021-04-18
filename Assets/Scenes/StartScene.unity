@@ -387,7 +387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: For up to 4 players! Press any button on a controller to join !
+  m_Text: For up to 4 players! Press any button on a controller to join!
 --- !u!222 &257018650
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -387,8 +387,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: For up to 4 players! Press any button on the controller to join at any
-    time when in the game.
+  m_Text: For up to 4 players! Press any button on a controller to join !
 --- !u!222 &257018650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -431,8 +430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.7311, y: -141.39}
-  m_SizeDelta: {x: 718.3554, y: 421.58}
+  m_AnchoredPosition: {x: -1.7311, y: -107.327}
+  m_SizeDelta: {x: 718.355, y: 489.707}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &367220146
 MonoBehaviour:
@@ -467,9 +466,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer the question on the top of the screen by pushing the words you want
-    to say into the mouth. Be carfeul, because many unwanted words will be automatically
-    be trying to get out!
+  m_Text: You're on a date and your brain is filled with gibberish. Answer the question
+    by pushing the words you want to say into the mouth, while keeping words that
+    make no sense out!
 --- !u!222 &367220147
 CanvasRenderer:
   m_ObjectHideFlags: 0

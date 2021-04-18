@@ -6198,6 +6198,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5366272752990104445, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.099998
+      objectReference: {fileID: 0}
+    - target: {fileID: 8591618491418664471, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -64.99994
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
 --- !u!224 &3628082754573343314 stripped

@@ -40,7 +40,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Mass
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4777408703333739584, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Material
@@ -65,10 +65,6 @@ PrefabInstance:
     - target: {fileID: 4777408703333739585, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Size.y
       value: 75
-      objectReference: {fileID: 0}
-    - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
-      propertyPath: m_initialForce.x
-      value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 6989437806352971446, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_constantForce.x

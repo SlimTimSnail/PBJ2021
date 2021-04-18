@@ -69,7 +69,7 @@ MonoBehaviour:
     m_PreInfinity: 0
     m_PostInfinity: 0
     m_RotationOrder: 4
-  m_xForceFactor: 0.2
-  m_yForceFactor: 0.2
+  m_xForceFactor: 0.1
+  m_yForceFactor: 0.1
   m_secondsLength: 3
   m_loop: 1

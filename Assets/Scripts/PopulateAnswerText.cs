@@ -16,6 +16,9 @@ public class PopulateAnswerText : MonoBehaviour
 
     private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
+    [SerializeField]
+    private TextToSpeech m_textToSpeech;
+
     private void OnEnable()
     {
         GameController.Instance.SentenceManager.WordScoredEvent += WordScored;
@@ -36,9 +39,11 @@ public class PopulateAnswerText : MonoBehaviour
             case GameState.Playing:
                 break;
             case GameState.Win_Level:
+                m_textToSpeech.RunTTS(m_text.text);
                 ResetAnswer();
                 break;
             case GameState.Lose_Level:
+                m_textToSpeech.RunTTS(m_text.text);
                 ResetAnswer();
                 break;
             default:

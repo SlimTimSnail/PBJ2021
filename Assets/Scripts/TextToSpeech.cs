@@ -8,7 +8,7 @@ using UnityEngine.Networking;
 [RequireComponent(typeof(AudioSource))]
 public class TextToSpeech : MonoBehaviour
 {
-    string m_urlPrefix = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=";
+    private const string m_urlPrefix = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=";
 
     private AudioSource m_audioSource;
 

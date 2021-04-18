@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c634f226c0b6e6044adc12b34682f211, type: 3}
-  m_Name: ShortWord Force Pattern Data 1
+  m_Name: MediumWord Force Pattern Data
   m_EditorClassIdentifier: 
   m_xForceOverTime:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: -0.1
       inSlope: 2
       outSlope: -0.021305768
       tangentMode: 1
@@ -35,7 +35,7 @@ MonoBehaviour:
       outWeight: 0
     - serializedVersion: 3
       time: 1
-      value: 0
+      value: -0.1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -50,24 +50,24 @@ MonoBehaviour:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
+      value: -1
+      inSlope: 2
+      outSlope: 2
       tangentMode: 34
       weightedMode: 0
       inWeight: 0
-      outWeight: 0
+      outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
       value: 1
-      inSlope: 1
-      outSlope: 1
+      inSlope: 2
+      outSlope: 2
       tangentMode: 34
       weightedMode: 0
-      inWeight: 0
+      inWeight: 0.33333334
       outWeight: 0
     m_PreInfinity: 0
     m_PostInfinity: 0
     m_RotationOrder: 4
-  m_secondsLength: 1
+  m_secondsLength: 3
   m_loop: 1

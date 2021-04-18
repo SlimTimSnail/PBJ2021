@@ -568,6 +568,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &225537619
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -690,6 +691,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &274486267
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2217,6 +2219,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &1005087623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2561,6 +2564,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &1146187466
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2902,6 +2906,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &1397461454
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3838,6 +3843,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &2070271241
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3960,6 +3966,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &2083582757
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4082,6 +4089,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &2114072540
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4204,6 +4212,7 @@ MonoBehaviour:
   m_initialForce: {x: 0, y: 0}
   m_constantForce: {x: 0, y: 0}
   m_randomStartingRotation: 0
+  m_movementPatternData: {fileID: 0}
 --- !u!61 &2114326363
 BoxCollider2D:
   m_ObjectHideFlags: 0

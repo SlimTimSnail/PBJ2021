@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,6 +10,9 @@ public class SentenceManager : MonoBehaviour
     private Sentence[] m_sentences;
     [SerializeField]
     private UnityEvent m_sentenceComplete;
+
+    [SerializeField]
+    public Action<List<Word>> WordScoredEvent;
 
 
     public Sentence CurrentSentence => m_sentences[m_currentSentence];
@@ -139,6 +143,8 @@ public class SentenceManager : MonoBehaviour
                 ++m_points;
             m_sentenceComplete.Invoke();
         }
+
+        WordScoredEvent?.Invoke(m_formedSentence);
     }
 
 }

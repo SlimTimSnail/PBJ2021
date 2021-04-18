@@ -8,7 +8,7 @@ public class WordDataManager : MonoBehaviour
     [SerializeField]
     private List<Word> m_wordDataList;
 
-    private Dictionary<WordObject.WordLength, List<Word>> m_wordLengthMap = new Dictionary<WordObject.WordLength, List<Word>>();
+    private Dictionary<WordLength, List<Word>> m_wordLengthMap = new Dictionary<WordLength, List<Word>>();
 
     private void Start()
     {
@@ -24,7 +24,7 @@ public class WordDataManager : MonoBehaviour
         }
     }
 
-    public Word GetNextWordData(WordObject.WordLength length)
+    public Word GetNextWordData(WordLength length)
     {
         List<Word> wordList = m_wordLengthMap[length];
         if (wordList.Count < 1) throw new InvalidOperationException($"Have used all words for length: {length}");

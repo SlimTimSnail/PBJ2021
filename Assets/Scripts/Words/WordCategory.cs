@@ -4,3 +4,10 @@ public enum WordCategory
     Verb,
     Object
 }
+
+public enum WordLength
+{
+    Short,
+    Medium,
+    Long
+}

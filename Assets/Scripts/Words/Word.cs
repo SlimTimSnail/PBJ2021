@@ -7,19 +7,22 @@ public class Word : ScriptableObject
     public float Points => m_points;
     public float Weight => m_weight;
     public WordCategory Category => m_category;
-    public int Size => m_size;
 
-    public WordObject.WordLength Length { get {
+    public WordLength Length
+    { 
+        get
+        {
             switch (m_text.Length)
             {
                 case int length when length < 4:
-                    return WordObject.WordLength.Short;
+                    return WordLength.Short;
                 case int length when length < 8:
-                    return WordObject.WordLength.Medium;
+                    return WordLength.Medium;
                 default:
-                    return WordObject.WordLength.Long;
+                    return WordLength.Long;
             }
-    } }
+        } 
+    }
 
     public int MatchTags(Word other)
     {

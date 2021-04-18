@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -22,6 +23,43 @@ public class WordMovement : MonoBehaviour
     private ForcePatternData m_movementPatternData;
 
     private float m_forcePatternTime;
+
+    private void OnEnable()
+    {
+        GameController.Instance.GameStateEnterEvent += GameStateEntered;
+    }
+
+    private void OnDisable()
+    {
+        GameController.Instance.GameStateEnterEvent -= GameStateEntered;
+    }
+
+    private void GameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                enabled = false;
+                break;
+            case GameState.Playing:
+                enabled = true;
+                break;
+            case GameState.Win_Level:
+                StopMovement();
+                break;
+            case GameState.Lose_Level:
+                StopMovement();
+                break;
+            default:
+                break;
+        }
+    }
+
+    private void StopMovement()
+    {
+        m_rigidbody.velocity = new Vector2();
+        m_rigidbody.angularVelocity = 0f;
+    }
 
     private void Awake()
     {
@@ -48,17 +86,23 @@ public class WordMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        m_rigidbody.AddForce(m_constantForce * m_rigidbody.mass);
-
-        if (m_movementPatternData != null && !m_ignoreSpawner)
+        if (GameController.Instance.CurrentGameState == GameState.Playing)
         {
-            Vector2 forcePatternNow = m_movementPatternData.GetForceAtTime(m_forcePatternTime);
-            m_rigidbody.AddForce(forcePatternNow * m_rigidbody.mass);
+            m_rigidbody.AddForce(m_constantForce * m_rigidbody.mass);
+
+            if (m_movementPatternData != null && !m_ignoreSpawner)
+            {
+                Vector2 forcePatternNow = m_movementPatternData.GetForceAtTime(m_forcePatternTime);
+                m_rigidbody.AddForce(forcePatternNow * m_rigidbody.mass);
+            }
         }
     }
 
     private void Update()
     {
-        m_forcePatternTime += Time.deltaTime;
+        if (GameController.Instance.CurrentGameState == GameState.Playing)
+        {
+            m_forcePatternTime += Time.deltaTime;
+        }
     }
 }

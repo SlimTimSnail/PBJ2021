@@ -12,7 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a5ecfab4a3dce4eae1151d200db160, type: 3}
   m_Name: Question02
   m_EditorClassIdentifier: 
-  m_question: Second Question?
+  m_responses:
+  - Nope, No way!
+  - "Uhh.. what? That\u2019s real weird."
+  - "Hmm, I don\u2019t know. That seems weird."
+  - You do? Sure, I can live with that.
+  - "That\u2019s nice, sure."
+  - Wow, that sounds fun! What a great thing to do!
+  m_question: You said you work with your Uncle. What is your Uncle's Job?
   m_validWords:
   - {fileID: 11400000, guid: 8bd9af882c5137f4cbf75eeb96a65f1c, type: 2}
   - {fileID: 11400000, guid: 546a85fa7ace7a04a86bd2cf6d359f94, type: 2}

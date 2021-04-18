@@ -23,7 +23,7 @@ public class SentenceManager : MonoBehaviour
 
 
     private int m_currentSentence = -1;
-    public Sentence CurrentSentence => m_sentences[m_currentSentence];
+    public Sentence CurrentSentence => m_currentSentence >= 0 ? m_sentences[m_currentSentence] : null;
     
     private SentenceState m_sentenceState;
     public SentenceState SentenceState => m_sentenceState;

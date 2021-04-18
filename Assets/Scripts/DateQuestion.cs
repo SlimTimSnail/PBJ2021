@@ -13,7 +13,8 @@ public class DateQuestion : MonoBehaviour
     void Start()
     {
         GameController.Instance.SentenceManager.NewSentenceEvent += OnNewSentence;
-        OnNewSentence(GameController.Instance.SentenceManager.CurrentSentence.Question);
+        if (GameController.Instance.SentenceManager.CurrentSentence != null)
+            OnNewSentence(GameController.Instance.SentenceManager.CurrentSentence.Question);
     }
 
     private void OnDestroy()

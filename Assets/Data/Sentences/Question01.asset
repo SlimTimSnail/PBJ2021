@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a5ecfab4a3dce4eae1151d200db160, type: 3}
   m_Name: Question01
   m_EditorClassIdentifier: 
+  m_question: What's your favourite food?
   m_validWords:
   - {fileID: 11400000, guid: 8387e963bc7887541aaf63c775534370, type: 2}
   - {fileID: 11400000, guid: 5467f427ba8f5d845982a897268d4057, type: 2}

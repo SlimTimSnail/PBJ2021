@@ -16,6 +16,8 @@ public class PopulateAnswerText : MonoBehaviour
 
     private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
+    private string m_cleanText = null;
+
     [SerializeField]
     private TextToSpeech m_textToSpeech;
 
@@ -53,21 +55,24 @@ public class PopulateAnswerText : MonoBehaviour
     private IEnumerator PlayTTSOnDelayCoroutine(float secondsDelay)
     {
         yield return new WaitForSeconds(secondsDelay);
-        m_textToSpeech.RunTTS(m_text.text);
+        m_textToSpeech.RunTTS(m_cleanText);
     }
 
     private void ResetAnswer()
     {
         m_text.text = "";
+        m_cleanText = "";
     }
 
     private void WordScored(List<Word> currentSentence, SentenceState sentenceState)
     {
-        string sentenceToDisplay = BuildSentenceString(currentSentence, sentenceState);
+        string sentenceToDisplay = BuildSentenceString(currentSentence, sentenceState, true);
         m_text.text = sentenceToDisplay;
+
+        m_cleanText = BuildSentenceString(currentSentence, sentenceState, false);
     }
 
-    private string BuildSentenceString(List<Word> currentSentence, SentenceState sentenceState)
+    private string BuildSentenceString(List<Word> currentSentence, SentenceState sentenceState, bool includeColor)
     {
         m_sentenceBuilder.Clear();
         for (int i = 0; i < currentSentence.Count; i++)
@@ -75,17 +80,21 @@ public class PopulateAnswerText : MonoBehaviour
             Word w = currentSentence[i];
 
             string wordString = w.Text;
-            switch (w.Category)
+
+            if (includeColor)
             {
-                case WordCategory.Subject:
-                    m_sentenceBuilder.Append("<color=#FFB2B2>");
-                    break;
-                case WordCategory.Verb:
-                    m_sentenceBuilder.Append("<color=#B2FFB9>");
-                    break;
-                case WordCategory.Object:
-                    m_sentenceBuilder.Append("<color=#B2CDFF>");
-                    break;
+                switch (w.Category)
+                {
+                    case WordCategory.Subject:
+                        m_sentenceBuilder.Append("<color=#FFB2B2>");
+                        break;
+                    case WordCategory.Verb:
+                        m_sentenceBuilder.Append("<color=#B2FFB9>");
+                        break;
+                    case WordCategory.Object:
+                        m_sentenceBuilder.Append("<color=#B2CDFF>");
+                        break;
+                }
             }
             if (i == 0)
             {
@@ -97,13 +106,13 @@ public class PopulateAnswerText : MonoBehaviour
                 {
                     m_sentenceBuilder.Append(m_textInfo.ToTitleCase(m_textInfo.ToLower(wordString)));
                 }
-                m_sentenceBuilder.Append("</color>");
+                if (includeColor) m_sentenceBuilder.Append("</color>");
             }
             else
             {
                 m_sentenceBuilder.Append(" ");
                 m_sentenceBuilder.Append(m_textInfo.ToLower(wordString));
-                m_sentenceBuilder.Append("</color>");
+                if (includeColor) m_sentenceBuilder.Append("</color>");
 
                 if (i == currentSentence.Count - 1)
                 {

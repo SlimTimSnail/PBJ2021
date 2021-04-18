@@ -3,6 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+public enum SentenceState
+{
+    Incomplete,
+    Complete,
+}
+
 public class SentenceManager : MonoBehaviour
 {
     [SerializeField]
@@ -16,8 +22,11 @@ public class SentenceManager : MonoBehaviour
     public System.Action<List<Word>, SentenceState> WordScoredEvent;
 
 
-    public Sentence CurrentSentence => m_sentences[m_currentSentence];
     private int m_currentSentence = -1;
+    public Sentence CurrentSentence => m_currentSentence >= 0 ? m_sentences[m_currentSentence] : null;
+    
+    private SentenceState m_sentenceState;
+    public SentenceState SentenceState => m_sentenceState;
 
     private WordPool m_subjectPool;
     private WordPool m_verbPool;
@@ -29,6 +38,7 @@ public class SentenceManager : MonoBehaviour
     private bool m_verbSpoken;
     private bool m_objectSpoken;
     private bool m_correctOrder;
+    
     private int m_nextWord = 0;
     private int m_points;
 
@@ -86,16 +96,12 @@ public class SentenceManager : MonoBehaviour
         m_verbSpoken = false;
         m_objectSpoken = false;
         m_correctOrder = true;
+        m_sentenceState = SentenceState.Incomplete;
 
         m_nextWord = Random.Range(0, 3);
         GetNextWord();
 
         NewSentenceEvent?.Invoke(CurrentSentence.Question);
-    }
-
-    public WordLength GetNextWordLength()
-    {
-        return m_currentWord.Length;
     }
 
     public Word GetNextWord()
@@ -122,7 +128,7 @@ public class SentenceManager : MonoBehaviour
     
     public void WordScored(Word word)
     {
-        if (word == null) return;
+        if (word == null || m_sentenceState == SentenceState.Complete) return;
 
         m_formedSentence.Add(word);
         bool isValid = CurrentSentence.IsValidWord(word);
@@ -158,21 +164,15 @@ public class SentenceManager : MonoBehaviour
         if (isValid)
             ++m_points;
 
-        SentenceState sentenceState = SentenceState.Incomplete;
         if (m_subjectSpoken && m_verbSpoken && m_objectSpoken)
         {
-            sentenceState = SentenceState.Complete;
+            m_sentenceState = SentenceState.Complete;
             if (m_correctOrder)
                 ++m_points;
             m_sentenceComplete.Invoke();
         }
 
-        WordScoredEvent?.Invoke(m_formedSentence, sentenceState);
+        WordScoredEvent?.Invoke(m_formedSentence, m_sentenceState);
     }
 
-}
-public enum SentenceState
-{
-    Incomplete,
-    Complete,
 }

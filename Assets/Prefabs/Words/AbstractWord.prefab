@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2008907836140491298}
   - component: {fileID: 7402141472185872284}
   - component: {fileID: 8194661939095303050}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 4777408703333739585}
   - component: {fileID: 6989437806352971446}
   - component: {fileID: 8987589486781496436}
-  m_Layer: 11
+  m_Layer: 10
   m_Name: AbstractWord
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -222,6 +222,7 @@ MonoBehaviour:
   m_initialForce: {x: 100, y: 0}
   m_constantForce: {x: 15, y: 0}
   m_randomStartingRotation: 1
+  m_movementPatternData: {fileID: 0}
 --- !u!114 &8987589486781496436
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4440426551242173419}
   - component: {fileID: 4440426551242173417}
   - component: {fileID: 4440426551242173416}
-  m_Layer: 5
+  m_Layer: 8
   m_Name: LeftCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}

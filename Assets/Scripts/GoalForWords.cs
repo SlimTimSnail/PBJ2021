@@ -6,6 +6,19 @@ public class GoalForWords : MonoBehaviour
 {
     [SerializeField]
     private TextToSpeech m_textToSpeech;
+    [SerializeField]
+    private GameObject m_blocker;
+
+
+    private void Start()
+    {
+        GameController.Instance.GameStateEnterEvent += OnGameStateChange;
+    }
+
+    void OnGameStateChange(GameState state)
+    {
+        m_blocker.SetActive(state != GameState.Playing);
+    }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {

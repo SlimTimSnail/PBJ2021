@@ -16,6 +16,9 @@ public class PopulateAnswerText : MonoBehaviour
 
     private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
+    [SerializeField]
+    private TextToSpeech m_textToSpeech;
+
     private void OnEnable()
     {
         GameController.Instance.SentenceManager.WordScoredEvent += WordScored;
@@ -37,12 +40,20 @@ public class PopulateAnswerText : MonoBehaviour
                 ResetAnswer();
                 break;
             case GameState.Win_Level:
+                StartCoroutine(PlayTTSOnDelayCoroutine(1f));
                 break;
             case GameState.Lose_Level:
+                StartCoroutine(PlayTTSOnDelayCoroutine(1f));
                 break;
             default:
                 break;
         }
+    }
+
+    private IEnumerator PlayTTSOnDelayCoroutine(float secondsDelay)
+    {
+        yield return new WaitForSeconds(secondsDelay);
+        m_textToSpeech.RunTTS(m_text.text);
     }
 
     private void ResetAnswer()

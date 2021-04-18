@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Question03
   m_EditorClassIdentifier: 
   m_responses:
-  - I think we should see other people.
-  - I don' think so
-  - Ehhh, I don't know
-  - Err, ok.
-  - That sounds good
-  - Just what I was thinking! Great!
+  - I think we should see other people. Goodbye
+  - I don' think so, I'm out.
+  - Ehhh, I don't know. I'll think about it. Bye.
+  - Err, ok. I'll call you next time
+  - That sounds good. See you then!
+  - Just what I was thinking! Great! See you then!
   m_question: Last question - what would we do on our next date?
   m_validWords:
   - {fileID: 11400000, guid: b185be47f35784742aecaf678093326f, type: 2}

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using UnityEngine;
@@ -11,7 +12,9 @@ public class PopulateAnswerText : MonoBehaviour
     [SerializeField]
     private Text m_text; 
     
-    StringBuilder m_sentenceBuilder = new StringBuilder();
+    private StringBuilder m_sentenceBuilder = new StringBuilder();
+
+    private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
     private void OnEnable()
     {
@@ -27,14 +30,14 @@ public class PopulateAnswerText : MonoBehaviour
         m_sentenceBuilder.Clear();
         for (int i = 0; i < currentSentence.Count; i++)
         {
-            if (i > 0)
+            if (i == 0)
             {
-                m_sentenceBuilder.Append(" ");
-                m_sentenceBuilder.Append(currentSentence[i].Text.ToLower());
+                m_sentenceBuilder.Append(m_textInfo.ToTitleCase(m_textInfo.ToLower(currentSentence[i].Text)));
             }
             else
             {
-                m_sentenceBuilder.Append(currentSentence[i].Text);
+                m_sentenceBuilder.Append(" ");
+                m_sentenceBuilder.Append(m_textInfo.ToLower(currentSentence[i].Text));
             }
         }
         m_text.text = m_sentenceBuilder.ToString();

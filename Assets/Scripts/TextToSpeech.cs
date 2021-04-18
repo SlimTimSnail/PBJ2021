@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text.RegularExpressions;
 using UnityEngine;
 using UnityEngine.Networking;
@@ -10,6 +11,8 @@ public class TextToSpeech : MonoBehaviour
     string m_urlPrefix = "https://translate.google.com/translate_tts?ie=UTF-8&client=tw-ob&tl=en&q=";
 
     private AudioSource m_audioSource;
+
+    private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
     private void Awake()
     {
@@ -22,7 +25,7 @@ public class TextToSpeech : MonoBehaviour
     }
     private IEnumerator GetTTS(string textToSpeechWords)
     {
-        string url = m_urlPrefix + UnityWebRequest.EscapeURL(textToSpeechWords);
+        string url = m_urlPrefix + UnityWebRequest.EscapeURL(m_textInfo.ToLower(textToSpeechWords));
         Debug.LogFormat("TTS with Url = {0}", url);
         using (UnityWebRequest www = UnityWebRequestMultimedia.GetAudioClip(url, AudioType.MPEG))
         {

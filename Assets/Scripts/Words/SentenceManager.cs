@@ -17,11 +17,9 @@ public class SentenceManager : MonoBehaviour
     [SerializeField]
     private UnityEvent m_sentenceComplete;
 
-    [SerializeField]
+    public System.Action<string> ResponseEvent;
     public System.Action<string> NewSentenceEvent;
-    [SerializeField]
     public System.Action<List<Word>, SentenceState> WordScoredEvent;
-    [SerializeField]
     public System.Action<int> PointsEvent;
 
 
@@ -67,8 +65,11 @@ public class SentenceManager : MonoBehaviour
                 NewSentence();
                 break;
             case GameState.Win_Level:
+                ResponseEvent?.Invoke(CurrentSentence.Responses[CurrentSentence.Responses.Length - 1]);
                 break;
             case GameState.Lose_Level:
+                int value = Mathf.Clamp(3 + m_points, 0, 3);
+                ResponseEvent?.Invoke(CurrentSentence.Responses[value]);
                 break;
             default:
                 break;

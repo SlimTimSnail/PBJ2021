@@ -92,10 +92,10 @@ public class GameController : MonoBehaviour
             case GameState.Playing:
                 break;
             case GameState.Win_Level:
-                StartCoroutine(MoveToStateCoroutine(5f));
+                StartCoroutine(MoveToStateCoroutine(10f));
                 break;
             case GameState.Lose_Level:
-                StartCoroutine(MoveToStateCoroutine(5f));
+                StartCoroutine(MoveToStateCoroutine(10f));
                 break;
             default:
                 break;

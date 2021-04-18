@@ -14,6 +14,7 @@ public class DateQuestion : MonoBehaviour
     void Start()
     {
         GameController.Instance.SentenceManager.NewSentenceEvent += OnNewSentence;
+        GameController.Instance.SentenceManager.ResponseEvent += OnResponse;
         if (GameController.Instance.SentenceManager.CurrentSentence != null)
             OnNewSentence(GameController.Instance.SentenceManager.CurrentSentence.Question);
     }
@@ -31,5 +32,16 @@ public class DateQuestion : MonoBehaviour
     {
         m_text.text = question;
         m_textToSpeech.RunTTS(question);
+    }
+
+    void OnResponse(string response)
+    {
+        StartCoroutine(DelayResponse(response));
+    }
+
+    IEnumerator DelayResponse(string response)
+    {
+        yield return new WaitForSeconds(5f);
+        OnNewSentence(response);
     }
 }

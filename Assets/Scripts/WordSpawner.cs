@@ -19,10 +19,13 @@ public class WordSpawner : MonoBehaviour
 
     private float m_currentTimer;
 
+    private SentenceManager m_manager;
 
-    private void Awake()
+
+    private void Start()
     {
         m_nextTime = Time.time + m_secondsInterval;
+        m_manager = GameController.Instance.SentenceManager;
     }
 
     // Update is called once per frame
@@ -37,7 +40,9 @@ public class WordSpawner : MonoBehaviour
 
     private void Spawn()
     {
-        Word word = GameController.Instance.SentenceManager.GetNextWord();
+        if (m_manager.SentenceState == SentenceState.Complete) return;
+
+        Word word = m_manager.GetNextWord();
         GameObject prefab = null;
         switch (word.Length)
         {

@@ -53,7 +53,7 @@ public class WordMovement : MonoBehaviour
         if (m_movementPatternData != null && !m_ignoreSpawner)
         {
             Vector2 forcePatternNow = m_movementPatternData.GetForceAtTime(m_forcePatternTime);
-            m_rigidbody.AddForce(forcePatternNow);
+            m_rigidbody.AddForce(forcePatternNow * m_rigidbody.mass);
         }
     }
 

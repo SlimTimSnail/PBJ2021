@@ -50,6 +50,8 @@ public class GameController : MonoBehaviour
     public GameState CurrentGameState { get { return m_currentGameState; } set { SetGameState(value); } }
     private void SetGameState(GameState value)
     {
+        if (value == m_currentGameState) return;
+
         GameStateExitEvent?.Invoke(m_currentGameState);
         m_currentGameState = value;
         GameStateEnterEvent?.Invoke(value);
@@ -71,6 +73,44 @@ public class GameController : MonoBehaviour
     {
         Debug.Log("Player Joined");
         CurrentGameState = GameState.Playing;
+    }
+    private void OnEnable()
+    {
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
+    }
+    private void OnDisable()
+    {
+        GameController.Instance.GameStateEnterEvent -= OnGameStateEntered;
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                break;
+            case GameState.Playing:
+                break;
+            case GameState.Win_Level:
+                StartCoroutine(MoveToStateCoroutine(5f));
+                break;
+            case GameState.Lose_Level:
+                StartCoroutine(MoveToStateCoroutine(5f));
+                break;
+            default:
+                break;
+        }
+    }
+
+    private IEnumerator MoveToStateCoroutine(float delaySeconds)
+    {
+        yield return new WaitForSeconds(delaySeconds);
+        CurrentGameState = GameState.Playing;
+    }
+
+    public void Win()
+    {
+        CurrentGameState = GameState.Win_Level;
     }
 }
 

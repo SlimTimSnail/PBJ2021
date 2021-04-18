@@ -789,6 +789,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7379820448713418714}
     m_Modifications:
+    - target: {fileID: 4331753868805806248, guid: 9a839d69459b5f84883afc9ec3983cf4, type: 3}
+      propertyPath: m_Text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5071991511100882216, guid: 9a839d69459b5f84883afc9ec3983cf4, type: 3}
       propertyPath: m_Name
       value: CharacterSpeech

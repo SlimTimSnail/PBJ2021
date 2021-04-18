@@ -64,12 +64,11 @@ public class SentenceManager : MonoBehaviour
             case GameState.Start:
                 break;
             case GameState.Playing:
+                NewSentence();
                 break;
             case GameState.Win_Level:
-                NewSentence();
                 break;
             case GameState.Lose_Level:
-                NewSentence();
                 break;
             default:
                 break;
@@ -79,7 +78,7 @@ public class SentenceManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        NewSentence();
+
     }
 
     public void NewSentence()

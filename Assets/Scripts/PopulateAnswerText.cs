@@ -34,12 +34,11 @@ public class PopulateAnswerText : MonoBehaviour
             case GameState.Start:
                 break;
             case GameState.Playing:
+                ResetAnswer();
                 break;
             case GameState.Win_Level:
-                ResetAnswer();
                 break;
             case GameState.Lose_Level:
-                ResetAnswer();
                 break;
             default:
                 break;

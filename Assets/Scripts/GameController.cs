@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -39,8 +40,16 @@ public class GameController : MonoBehaviour
     public Word GetNextWordData(WordLength length) => m_wordDataManager.GetNextWordData(length);
     #endregion
 
+    public Action<GameState> GameStateExitEvent;
+    public Action<GameState> GameStateEnterEvent;
     private GameState m_currentGameState;
-    public GameState CurrentGameState => m_currentGameState;
+    public GameState CurrentGameState { get { return m_currentGameState; } set { SetGameState(value); } }
+    private void SetGameState(GameState value)
+    {
+        GameStateExitEvent?.Invoke(m_currentGameState);
+        m_currentGameState = value;
+        GameStateEnterEvent?.Invoke(value);
+    }
 
     // Start is called before the first frame update
     void Awake()
@@ -49,10 +58,15 @@ public class GameController : MonoBehaviour
         m_currentGameState = GameState.Start;
     }
 
+    private void Start()
+    {
+        GameStateEnterEvent?.Invoke(m_currentGameState);
+    }
+
     public void OnPlayerJoined(PlayerInput playerInput)
     {
         Debug.Log("Player Joined");
-        m_currentGameState = GameState.Playing;
+        CurrentGameState = GameState.Playing;
     }
 }
 

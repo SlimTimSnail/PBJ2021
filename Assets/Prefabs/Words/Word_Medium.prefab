@@ -49,12 +49,16 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: b3ddff7456713e445ae0d042e7fb4fde, type: 2}
     - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Text
-      value: Medium
+      value: MEDIUM
       objectReference: {fileID: 0}
     - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: f9904d63c95822d418b04789af31e091, type: 3}
+    - target: {fileID: 8194661939095303050, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 80
+      objectReference: {fileID: 0}
     - target: {fileID: 8545585747573465428, guid: 9975096ed9694744a91c8307f01a0a49, type: 3}
       propertyPath: m_Name
       value: Word_Medium

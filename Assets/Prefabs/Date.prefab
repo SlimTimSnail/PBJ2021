@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 800}
+  m_SizeDelta: {x: 480, y: 720}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2898028216612311837
 CanvasRenderer:
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5367680061594284462, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 044526b54a1751840a6d2030879e3ca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -111,8 +111,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.5, y: 105.2}
-  m_SizeDelta: {x: 300, y: 300}
+  m_AnchoredPosition: {x: -0.5, y: 43}
+  m_SizeDelta: {x: 195, y: 210}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5453250015525267445
 CanvasRenderer:
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 9168450983845608777, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
+  m_Sprite: {fileID: -3074989203965827862, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_sprites:
-  - {fileID: -4798002114643107607, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
-  - {fileID: 5633451081610205027, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
-  - {fileID: 2980146131886148993, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
-  - {fileID: 9168450983845608777, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
-  - {fileID: -4605820042016627989, guid: 9c242970716fe2b4c81c468b69c7d6cd, type: 3}
-  m_expression: 3
+  - {fileID: -7573911595463407514, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  - {fileID: -2724025857007345015, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  - {fileID: 8333831796399749840, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  - {fileID: -4959392919860814194, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  - {fileID: -3074989203965827862, guid: e0bf8202c2eeaf1419a924d676257de6, type: 3}
+  m_expression: 4

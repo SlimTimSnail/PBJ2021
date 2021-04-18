@@ -63,12 +63,11 @@ public class SentenceManager : MonoBehaviour
             case GameState.Start:
                 break;
             case GameState.Playing:
+                NewSentence();
                 break;
             case GameState.Win_Level:
-                NewSentence();
                 break;
             case GameState.Lose_Level:
-                NewSentence();
                 break;
             default:
                 break;

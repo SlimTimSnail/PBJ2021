@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Like
   m_EditorClassIdentifier: 
   m_text: LIKE
-  m_category: 0
+  m_category: 1
   m_tags:
   - Desire
   m_points: 1

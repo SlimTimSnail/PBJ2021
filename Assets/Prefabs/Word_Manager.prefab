@@ -66,7 +66,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b607e5ff0650e494e954814b8837f9a3, type: 2}
   - {fileID: 11400000, guid: efb6017d3cd37e84c9f7809d444f5633, type: 2}
   - {fileID: 11400000, guid: 08b6ed9d7417d48c8a2beba6ceb3bc51, type: 2}
-  - {fileID: 11400000, guid: 1266660a106384eb5877ac7e1ca29c04, type: 2}
   - {fileID: 11400000, guid: a63f74050f2ab4e1ba1f140be6a44eca, type: 2}
   - {fileID: 11400000, guid: 3516322c0abcb4af38080d3a31352bc3, type: 2}
   - {fileID: 11400000, guid: bd7ae7a40a1dc4a3aba84a48b18f11cd, type: 2}
@@ -81,4 +80,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f28c3c020272747dba2471f970ab64d3, type: 2}
   - {fileID: 11400000, guid: b185be47f35784742aecaf678093326f, type: 2}
   - {fileID: 11400000, guid: 73236680603960547954983efac0f81c, type: 2}
-  m_currentWordIndex: 0

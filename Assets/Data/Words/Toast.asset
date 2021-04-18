@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Toast
   m_EditorClassIdentifier: 
   m_text: TOAST
-  m_category: 0
+  m_category: 2
   m_tags:
   - Object
   - Food

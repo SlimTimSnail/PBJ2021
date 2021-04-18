@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -536,8 +536,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer her question! Get at a <color=#FF0000>SUBJECT</color>,  <color=#00FF00>VERB</color>,
-    and <color=#0000FF>OBJECT</color> into the mouth.
+  m_Text: Answer her question! Get at a <color=#FFB2B2>SUBJECT</color>,  <color=#B2FFB9>VERB</color>,
+    and <color=#B2CDFF>OBJECT</color> into the mouth.
 --- !u!1001 &529442496749971173
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -774,6 +774,30 @@ PrefabInstance:
     - target: {fileID: 6794854089762527309, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063037555779099429, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.1981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063037555779099429, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.1981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8063037555779099429, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1981132
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227788228660602968, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227788228660602968, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8227788228660602968, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a10b0d14e5b7c443a86fe54547e75a8, type: 3}

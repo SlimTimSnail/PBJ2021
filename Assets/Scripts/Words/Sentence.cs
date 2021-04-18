@@ -4,6 +4,7 @@ using UnityEngine;
 public class Sentence : ScriptableObject
 {
     public string Question => m_question;
+    public string[] Responses => m_responses;
     public Word[] ValidWords => m_validWords;
     public Word[] InvalidWords => m_invalidWords;
 

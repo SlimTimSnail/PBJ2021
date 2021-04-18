@@ -18,7 +18,7 @@ public class StartScreen : MonoBehaviour
 
     public void OnExitClick()
 	{
-		Invoke("ExitGame", 0.5f);
+		Invoke("ExitGame", 0.3f);
 	}
 
     private void ExitGame()

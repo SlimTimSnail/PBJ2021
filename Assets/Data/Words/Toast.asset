@@ -12,11 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6503fcf8f2a62054ba08158200ffa5af, type: 3}
   m_Name: Toast
   m_EditorClassIdentifier: 
-  m_text: Toast
-  m_categories: 00000000
+  m_text: TOAST
+  m_category: 0
   m_tags:
   - Object
   - Food
   - Yellow
   m_points: 1
   m_weight: 1
+  m_size: 0

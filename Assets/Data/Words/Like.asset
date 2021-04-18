@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6503fcf8f2a62054ba08158200ffa5af, type: 3}
   m_Name: Like
   m_EditorClassIdentifier: 
-  m_text: Like
-  m_categories: 01000000
+  m_text: LIKE
+  m_category: 0
   m_tags:
   - Desire
   m_points: 1
   m_weight: 1
+  m_size: 0

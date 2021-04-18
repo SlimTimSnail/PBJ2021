@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6503fcf8f2a62054ba08158200ffa5af, type: 3}
   m_Name: Anime
   m_EditorClassIdentifier: 
-  m_text: Anime
+  m_text: ANIME
   m_category: 2
   m_tags: []
   m_points: 1
   m_weight: 1
+  m_size: 0

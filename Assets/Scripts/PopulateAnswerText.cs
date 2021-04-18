@@ -16,9 +16,6 @@ public class PopulateAnswerText : MonoBehaviour
 
     private TextInfo m_textInfo = CultureInfo.CurrentCulture.TextInfo;
 
-    [SerializeField]
-    private TextToSpeech m_textToSpeech;
-
     private void OnEnable()
     {
         GameController.Instance.SentenceManager.WordScoredEvent += WordScored;
@@ -39,11 +36,9 @@ public class PopulateAnswerText : MonoBehaviour
             case GameState.Playing:
                 break;
             case GameState.Win_Level:
-                m_textToSpeech.RunTTS(m_text.text);
                 ResetAnswer();
                 break;
             case GameState.Lose_Level:
-                m_textToSpeech.RunTTS(m_text.text);
                 ResetAnswer();
                 break;
             default:
@@ -67,7 +62,21 @@ public class PopulateAnswerText : MonoBehaviour
         m_sentenceBuilder.Clear();
         for (int i = 0; i < currentSentence.Count; i++)
         {
-            string wordString = currentSentence[i].Text;
+            Word w = currentSentence[i];
+
+            string wordString = w.Text;
+            switch (w.Category)
+            {
+                case WordCategory.Subject:
+                    m_sentenceBuilder.Append("<color=#FF0000>");
+                    break;
+                case WordCategory.Verb:
+                    m_sentenceBuilder.Append("<color=#00FF00>");
+                    break;
+                case WordCategory.Object:
+                    m_sentenceBuilder.Append("<color=#0000FF>");
+                    break;
+            }
             if (i == 0)
             {
                 if (wordString.Length == 1)
@@ -78,11 +87,13 @@ public class PopulateAnswerText : MonoBehaviour
                 {
                     m_sentenceBuilder.Append(m_textInfo.ToTitleCase(m_textInfo.ToLower(wordString)));
                 }
+                m_sentenceBuilder.Append("</color>");
             }
             else
             {
                 m_sentenceBuilder.Append(" ");
                 m_sentenceBuilder.Append(m_textInfo.ToLower(wordString));
+                m_sentenceBuilder.Append("</color>");
 
                 if (i == currentSentence.Count - 1)
                 {
@@ -92,6 +103,7 @@ public class PopulateAnswerText : MonoBehaviour
                     }
                 }
             }
+            
         }
 
         return m_sentenceBuilder.ToString();

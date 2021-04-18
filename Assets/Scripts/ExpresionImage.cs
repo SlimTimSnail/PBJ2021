@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Image)), ExecuteInEditMode]
+[RequireComponent(typeof(Image))]
 public class ExpresionImage : MonoBehaviour
 {
     [System.Serializable]

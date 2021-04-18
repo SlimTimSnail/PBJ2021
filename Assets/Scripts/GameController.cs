@@ -50,6 +50,8 @@ public class GameController : MonoBehaviour
     public GameState CurrentGameState { get { return m_currentGameState; } set { SetGameState(value); } }
     private void SetGameState(GameState value)
     {
+        if (value == m_currentGameState) return;
+
         GameStateExitEvent?.Invoke(m_currentGameState);
         m_currentGameState = value;
         GameStateEnterEvent?.Invoke(value);
@@ -104,6 +106,11 @@ public class GameController : MonoBehaviour
     {
         yield return new WaitForSeconds(delaySeconds);
         CurrentGameState = GameState.Playing;
+    }
+
+    public void Win()
+    {
+        CurrentGameState = GameState.Win_Level;
     }
 }
 

@@ -67,13 +67,13 @@ public class PopulateAnswerText : MonoBehaviour
             switch (w.Category)
             {
                 case WordCategory.Subject:
-                    m_sentenceBuilder.Append("<color=#FF0000>");
+                    m_sentenceBuilder.Append("<color=#FFB2B2>");
                     break;
                 case WordCategory.Verb:
-                    m_sentenceBuilder.Append("<color=#00FF00>");
+                    m_sentenceBuilder.Append("<color=#B2FFB9>");
                     break;
                 case WordCategory.Object:
-                    m_sentenceBuilder.Append("<color=#0000FF>");
+                    m_sentenceBuilder.Append("<color=#B2CDFF>");
                     break;
             }
             if (i == 0)

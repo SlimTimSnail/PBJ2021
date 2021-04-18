@@ -6106,6 +6106,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 688711242912911061, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_Text
+      value: Answer her question! Get a <color=#FF0000>SUBJECT</color>,  <color=#00FF00>VERB</color>,
+        and <color=#0000FF>OBJECT</color> into the mouth.
+      objectReference: {fileID: 0}
+    - target: {fileID: 688711242912911061, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 688711242912911061, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 688711242912911061, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1298255034801080114, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6213,6 +6230,10 @@ PrefabInstance:
     - target: {fileID: 4447528432980380413, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -12
+      objectReference: {fileID: 0}
+    - target: {fileID: 5366272752990104445, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 15.099998
       objectReference: {fileID: 0}
     - target: {fileID: 5760826051321512676, guid: cc131bf718c4d2b42b5914c0434f0858, type: 3}
       propertyPath: m_FontData.m_Alignment

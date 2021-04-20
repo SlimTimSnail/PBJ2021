@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,9 @@ public class WordSpawner : MonoBehaviour
     private GameObject m_longWord;
 
     [SerializeField]
-    private float m_secondsInterval;
+    private float m_minSecondsInterval;
+    [SerializeField]
+    private float m_maxSecondsInterval;
 
 
     private float m_nextTime;
@@ -49,7 +52,7 @@ public class WordSpawner : MonoBehaviour
 
     private void Start()
     {
-        m_nextTime = Time.time + m_secondsInterval;
+        m_nextTime = Time.time + GetNextInterval();
         m_manager = GameController.Instance.SentenceManager;
     }
 
@@ -59,8 +62,13 @@ public class WordSpawner : MonoBehaviour
         if (Time.time >= m_nextTime)
         {
             Spawn();
-            m_nextTime = Time.time + m_secondsInterval;
+            m_nextTime = Time.time + GetNextInterval();
         }
+    }
+
+    private float GetNextInterval()
+    {
+        return UnityEngine.Random.Range(m_minSecondsInterval, m_maxSecondsInterval);
     }
 
     private void Spawn()

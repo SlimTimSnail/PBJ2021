@@ -45,20 +45,20 @@ public class WordMovement : MonoBehaviour
                 enabled = true;
                 break;
             case GameState.Win_Level:
-                StopMovement();
+                SlowMovement();
                 break;
             case GameState.Lose_Level:
-                StopMovement();
+                SlowMovement();
                 break;
             default:
                 break;
         }
     }
 
-    private void StopMovement()
+    private void SlowMovement()
     {
-        m_rigidbody.velocity = new Vector2();
-        m_rigidbody.angularVelocity = 0f;
+        m_rigidbody.velocity /= 4f;
+        m_rigidbody.angularVelocity /= 4f;
     }
 
     private void Awake()

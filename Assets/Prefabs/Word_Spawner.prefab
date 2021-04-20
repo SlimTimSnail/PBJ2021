@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  m_selectRandomly: 1
 --- !u!114 &8960173513577084673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,4 +65,5 @@ MonoBehaviour:
   m_shortWord: {fileID: 835259324039223612, guid: ae95bdf07fb7dcd4b9832e8dfae640d0, type: 3}
   m_medWord: {fileID: 7843490033076041618, guid: e5936e3a2593dfb4f8c36cba07da93dc, type: 3}
   m_longWord: {fileID: 4093075846419487392, guid: 3a61aab04a771fc4b845dbaa6afc17d3, type: 3}
-  m_secondsInterval: 1.5
+  m_minSecondsInterval: 1.5
+  m_maxSecondsInterval: 2.25

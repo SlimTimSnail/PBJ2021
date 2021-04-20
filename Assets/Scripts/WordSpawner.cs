@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,7 +13,9 @@ public class WordSpawner : MonoBehaviour
     private GameObject m_longWord;
 
     [SerializeField]
-    private float m_secondsInterval;
+    private float m_minSecondsInterval;
+    [SerializeField]
+    private float m_maxSecondsInterval;
 
 
     private float m_nextTime;
@@ -21,23 +24,51 @@ public class WordSpawner : MonoBehaviour
 
     private SentenceManager m_manager;
 
+    public void Awake()
+    {
+        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
+    }
+
+    public void OnGameStateEntered(GameState state)
+    {
+        switch (state)
+        {
+            case GameState.Start:
+                enabled = false;
+                break;
+            case GameState.Playing:
+                enabled = true;
+                break;
+            case GameState.Win_Level:
+                enabled = false;
+                break;
+            case GameState.Lose_Level:
+                enabled = false;
+                break;
+            default:
+                break;
+        }
+    }
 
     private void Start()
     {
-        GameController.Instance.GameStateEnterEvent += OnGameStateEntered;
-
-        m_nextTime = Time.time + m_secondsInterval;
+        m_nextTime = Time.time + GetNextInterval();
         m_manager = GameController.Instance.SentenceManager;
     }
 
     // Update is called once per frame
     void Update()
     {
-        while (Time.time >= m_nextTime)
+        if (Time.time >= m_nextTime)
         {
             Spawn();
-            m_nextTime += m_secondsInterval;
+            m_nextTime = Time.time + GetNextInterval();
         }
+    }
+
+    private float GetNextInterval()
+    {
+        return UnityEngine.Random.Range(m_minSecondsInterval, m_maxSecondsInterval);
     }
 
     private void Spawn()
@@ -64,26 +95,5 @@ public class WordSpawner : MonoBehaviour
 
         GameObject wordObject = Instantiate(prefab);
         wordObject.GetComponent<WordObject>().Setup(word);
-    }
-
-    public void OnGameStateEntered(GameState state)
-    {
-        switch (state)
-        {
-            case GameState.Start:
-                enabled = false;
-                break;
-            case GameState.Playing:
-                enabled = true;
-                break;
-            case GameState.Win_Level:
-                enabled = false;
-                break;
-            case GameState.Lose_Level:
-                enabled = false;
-                break;
-            default:
-                break;
-        }
     }
 }

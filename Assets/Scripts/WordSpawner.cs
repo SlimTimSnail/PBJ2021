@@ -56,10 +56,10 @@ public class WordSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        while (Time.time >= m_nextTime)
+        if (Time.time >= m_nextTime)
         {
             Spawn();
-            m_nextTime += m_secondsInterval;
+            m_nextTime = Time.time + m_secondsInterval;
         }
     }
 

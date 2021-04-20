@@ -49,6 +49,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  m_selectRandomly: 1
 --- !u!114 &8960173513577084673
 MonoBehaviour:
   m_ObjectHideFlags: 0

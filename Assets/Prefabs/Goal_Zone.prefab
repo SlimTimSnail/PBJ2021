@@ -559,7 +559,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 450, y: 600}
+  m_Size: {x: 500, y: 800}
   m_EdgeRadius: 0
 --- !u!250 &9004372000734829044
 PointEffector2D:
